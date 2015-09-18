@@ -1,0 +1,17 @@
+<!-- game list panel -->
+<div class="bubblePanel bottomSubPanel bottomPanel _hackPaddingLayer" id="gameListPanel">
+    <img style="left: 450px;" id="glLoadingImg" src="/img/icons/loading.gif"
+         alt="<?=$i18n->get('gameList', 'loadingAltText')?>"/>
+    <img id="closeGameListPanel" src="/img/icons/icon_close.png" alt="<?=$i18n->get('gameList', 'closeIconAltText')?>"/>
+
+    <div id="glFilterSection" style="float: left; padding-left: 10px;"></div>
+
+    <div id="gameListContents"></div>
+
+    <div id="glAuxPanel" style='margin-top: 20px; padding-top: 5px; border-top: 1px dashed #CCC;'>
+        <div id="glAuxRewind" class="bspAuxBtn" style="float: left;">[<?=$i18n->get('ui', 'auxScrollTop')?>]</div>
+        <div id="glAuxClose" class="bspAuxBtn" class="" style="float: right;">[<?=$i18n->get('ui', 'auxClose')?>]</div>
+        <div style="clear: both;"></div>
+    </div>
+</div>
+<!-- end of game list panel -->

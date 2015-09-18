@@ -1,0 +1,188 @@
+<!-- profile panel -->
+<div class="bubblePanel bottomSubPanel bottomPanel _hackPaddingLayer" id="profilePanel" style="display: none">
+    <div id="profileMainTab">
+        <img id="profileCloseImg" src="/img/icons/icon_close.png" alt="<?=$i18n->get('ui', 'closeIconAltText')?>"/>
+
+        <div id="profileLoading"
+             style="padding-top: 20px; padding-left:20px; height:35px; font-family: Verdana; font-weight: bold;">
+            <span style="float: left; color:#444444;"><?=$i18n->get("ui", "loading")?>...&nbsp;</span>
+            <img style="float: left; margin-top: -10px;" src="/img/icons/loading.gif">
+        </div>
+
+        <div id="profileContents" style="display: none;">
+            <div style='float: left;'>
+                <h4><?=$i18n->format("profile", "header", "<span id='profileUsername'></span>")?></h4>
+            </div>
+            <img src="/img/icons/loading.gif" class="profileLoadingIcon" id="profileLoadingIcon">
+
+            <div class="clear"></div>
+
+            <table>
+                <tr>
+                    <td width="1%" style="vertical-align: top;">
+                        <div id="profilePhoto"
+                             style="float: left; padding-top: 10px; padding-right: 10px; width: 135px;">
+                            <div class="profilePhotoFrame" id="profilePhotoFrame">
+                                <img src="/images/nophoto.jpg" class="profilePhoto"
+                                     alt="<?=$i18n->get('profile', 'noPhotoAltText')?>"/>
+                            </div>
+                        </div>
+                    </td>
+                    <td style="vertical-align: top;">
+                        <div id="profileData" style="float: left; padding-top: 3px;">
+                            <table id="profilePIStaticLayout">
+                                <tr>
+                                    <td>
+                                        <div id="profilePIStatic"></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div id="profileEditBtn" class="constantWidthBtn nonSelectable"
+                                             style="margin-left: 0px;"><?=$i18n->get("profile", "editProfileBtnLabel")?>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                            <div id="profilePIEditable">
+                                <form id="profileForm" method="post" enctype="multipart/form-data"
+                                      action="/gw/profile/updateProfile.php">
+                                    <table>
+                                        <tr>
+                                            <td><?=$i18n->get("profile", "birthdayLabel")?></td>
+                                            <td>
+                                                <table style="width: 100%" cellspacing="0" cellpadding="0">
+                                                    <tr>
+                                                        <td style='text-align: left;'>
+                                                            <select name="birthDay" id="profileBirthDay"
+                                                                    class="profileShortField">
+                                                                <option value='0'>—</option>
+                                                                <?php
+                                                                for ($i = 1; $i <= 31; $i++) {
+                                                                    echo "<option value='$i'>$i</option>";
+                                                                }
+                                                                ?>
+                                                            </select>
+                                                        </td>
+                                                        <td style='text-align: center;'>
+                                                            <select name="birthMonth" id="profileBirthMonth"
+                                                                    class="profileShortField">
+                                                                <option value='0'>—</option>
+                                                                <?php
+                                                                for ($i = 0; $i < 12; $i++) {
+                                                                    $j = $i + 1;
+                                                                    echo "<option value='$j'>" .
+                                                                $i18n->get("monthsBeta", $j) ."</option>";
+                                                                }
+                                                                ?>
+                                                            </select>
+                                                        </td>
+                                                        <td style='text-align: right;'>
+                                                            <select name="birthYear" id="profileBirthYear"
+                                                                    class="profileShortField">
+                                                                <option value='0'>—</option>
+                                                                <?php
+                                                                for ($i = date('Y'); $i >= 1900; $i--) {
+                                                                echo "
+                                                                <option value='$i'>$i</option>
+                                                                ";
+                                                                }
+                                                                ?>
+                                                            </select>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><?=$i18n->get("profile", "fromWhereLabel")?></td>
+                                            <td>
+                                                <input name="where" id="profileWhere" type="text" class="profileField"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><?=$i18n->get("profile", "linkLabel")?></td>
+                                            <td>
+                                                <input name="link" id="profileLink" type="text" class="profileField"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td title = "Для восстановления пароля"><?=$i18n->get("profile", "email")?>:</td>
+                                            <td title = "Для восстановления пароля">
+                                                <input name="mail" id="profileMail" type="email" class="profileField"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><?=$i18n->get("profile", "aboutLabel")?></td>
+                                            <td>
+                                                <textarea name="about" id="profileAbout" type="text"
+                                                          class="profileField"></textarea>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><?=$i18n->get("profile", "photoLabel")?></td>
+                                            <td>
+                                                <input id="profilePhotoField" name="photo" type="file" size="33"
+                                                       class="profileField"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                                <div class="profileCP">
+                                                    <div id="profileSaveBtn" class="constantWidthBtn nonSelectable"
+                                                         style="margin-left: 0px;">
+                                                        <?=$i18n->get("profile", "commitBtnLabel")?>
+                                                    </div>
+                                                    <div id="profileDiscardChangesBtn"
+                                                         class="constantWidthBtn nonSelectable"
+                                                         style="margin-left: 0px;">
+                                                        <?=$i18n->get("profile", "cancelBtnLabel")?>
+                                                    </div>
+                                                    <img id="profileLoadingImg" src="/img/icons/loading.gif"/>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </form>
+                            </div>
+                        </div>
+                        <div style="padding-top:15px; padding-left: 3px; clear: both;">
+                            <div class="bspTopHeader" id="profileUnreadMsgAlert">
+                                <span id='profileReadMsgBtn'><?$i18n->get("profile", "newMsgCountLabel")?>: 1</span>
+                            </div>
+                            <div style="display: block; padding-bottom: 15px;">
+                                <input type="checkbox" id="profileGoInvisible"><?=$i18n->get("profile", "goInvisible")?>
+                                <img id="profileGoInvisibleLoadingImg" src="/img/icons/loading_transparent.gif"
+                                     style="width: 14px; padding-left: 5px; display: none;" alt=""/>
+                            </div>
+                            <span class="bspTopHeader" id="profileGoToInbox">
+                                <?=$i18n->get("profile", "goToInbox")?>
+                            </span><br>
+                            <span class="bspTopHeader" id="sendToAdmin">
+                                <?=$i18n->get("profile", "writeAdmin")?>
+                            </span>
+                            <span class="bspTopHeader" id="changePassword">
+                                <?=$i18n->get("profile", "changePass")?>
+                            </span>
+                        </div>
+                        <div id="profileSideActivity"></div>
+                    </td>
+                </tr>
+            </table>
+
+            <div class="clear"></div>
+            <div class="profileLogoutPanel">
+                <div style="margin-top: 20px; padding-top: 5px; border-top: 1px dashed rgb(204, 204, 204); display: block;">
+                    <span class="bspAuxBtn" style="float: left;" id="profileLogoutBtn">[<?=$i18n->get("profile", "doLogout")?>]</span>
+                    <span class="bspAuxBtn" style="float: right;" id="shareBtn">[<?=$i18n->get("profile", "share")?>]</span>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="profileSubTab">
+    </div>
+</div>
+<!-- end of profile panel -->

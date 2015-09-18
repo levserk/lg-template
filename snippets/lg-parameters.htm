@@ -1,0 +1,133 @@
+<!-- params panel -->
+<div class="bubblePanel _hackOverFieldPanel" id="parametersPanel">
+    <img id="gpCloseIcon" src="/img/icons/icon_close.png" alt="<?=$i18n->get('parameters', 'closeIconAltText')?>"/>
+
+    <div class="overFieldInnerPanel" style="padding-right: 0px !important;">
+        <?php
+        if (isset($auxParamTop)) {
+            echo $auxParamTop;
+        }
+    ?>
+
+        <h4><?=$i18n->get('parameters', 'header')?></h4>
+
+        <div id="chooseGameLevelPanel" style="margin-left: -3px;">
+            <table>
+                <tr>
+                    <td style="vertical-align: top;">
+                        <input id="playRandomOption" type="radio" name="playMode"/>
+                        <label for="playRandomOption"><?=$i18n->get('parameters', 'playRandomOption')?></label>
+                    </td>
+                    <td style="vertical-align: top;">
+                        <input id="playSuccOption" type="radio" name="playMode"/>
+                        <label for="playSuccOption"><?=$i18n->get('parameters', 'playSuccOption')?></label>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="dontServePlayedPanel"
+        <?php echo $displayLogged; ?>>
+        <input type="checkbox" id="dontServeWonGamesOption"> <?=$i18n->get("parameters", "unsolvedOnlyOption")?>
+    </div>
+
+    <div id="gameIdArea" style="padding-top: 25px;">
+        <?=$i18n->format("parameters", "requestByIdLabel", $lowerGameIdBound, $higherGameIdBound)?>
+        &nbsp;&nbsp;<input id="gameIdTextField" type="text" size="4" maxlength="6">
+    </div>
+
+    <div id="chooseGameTypeSection">
+
+        <h4 style="margin-top: 20px;"><?=$i18n->get("parameters.category", "header")?></h4>
+
+        <table width="100%">
+            <tr>
+                <td>
+
+                    <table width="100%">
+
+                        <tr>
+                            <td>
+                                <input type="radio" name="gameType" id="playEasy">
+                            </td>
+                            <td>
+                                <label for="playEasy">
+                                    <?=$i18n->get("parameters.category", "easy")?>
+                                    <span class="levelDescr">
+                                        <?=$i18n->format("parameters.category", "easyHint", 0, 10)?>
+                                    </span>
+                                </label>
+                            </td>
+
+                            <td>
+                                <input type="radio" name="gameType" id="playNormal">
+                            </td>
+                            <td>
+                                <label for="playNormal">
+                                    <?=$i18n->get("parameters.category", "normal")?>
+                                    <span class="levelDescr">
+                                        <?=$i18n->format("parameters.category", "normalHint", 10, 30)?>
+                                    </span>
+                                </label>
+                            </td>
+
+                            <td>
+                                <input type="radio" name="gameType" id="playHard">
+                            </td>
+                            <td>
+                                <label for="playHard">
+                                    <?=$i18n->get("parameters.category", "hard")?>
+                                    <span class="levelDescr">
+                                        <?=$i18n->format("parameters.category", "hardHint", 30)?>
+                                    </span>
+                                </label>
+                            </td>
+                        </tr>
+
+                        <tr style="height: 25px; vertical-align: bottom;">
+                            <td>
+                                <input type="radio" name="gameType" id="playAll">
+                            </td>
+                            <td>
+                                <label for="playAll">
+                                    <?=$i18n->get("parameters.category", "all")?>
+                                </label>
+                            </td>
+
+                            <td>
+                                <input type="radio" name="gameType" id="playUnsolved">
+                            </td>
+                            <td>
+                                <label for="playUnsolved">
+                                    <?=$i18n->get("parameters.category", "unsolved")?>
+                                </label>
+                            </td>
+                        </tr>
+
+                    </table>
+
+                </td>
+            </tr>
+        </table>
+
+    </div>
+
+    <div id="chooseCardThemeSection" style="display: none;">
+        <h4 style="margin-top: 20px;"><?=$i18n->get("parameters.theme", "header")?></h4>
+
+        <div style="padding-top: 10px; padding-bottom: 15px; padding-left: 5px;">
+            <select id="gpThemeList">
+                <option value="windows"><?=$i18n->get("parameters.theme", "themeClassic")?></option>
+                <option value="anglo-american"><?=$i18n->get("parameters.theme", "themeAmerican")?></option>
+            </select>
+        </div>
+    </div>
+
+    <div id="gpCommitCancelSection" style="margin-top: 10px;">
+        <div class="constantWidthBtnParams" id="gpCommit"><?=$i18n->get("parameters", "commitBtnLabel")?></div>
+        <div class="constantWidthBtnParams" id="gpCancel"><?=$i18n->get("parameters", "cancelBtnLabel")?></div>
+    </div>
+
+</div>
+</div>
+<!-- end of params -->

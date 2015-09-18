@@ -1,0 +1,45 @@
+<div class="bubblePanel bottomSubPanel bottomPanel _hackPaddingLayer" id="gameInfoPanel">
+    <img style="float: right;" id="giCloseIcon" class="closePanelIcon" src="/img/icons/icon_close.png"
+         alt="<?=$i18n->get('ui', 'closeIconAltText')?>"/>
+
+    <div id="giEditable" style="display: none;">
+        <div id="gameStatusContents"></div>
+
+        <div style="width: 100%;" id="giCommentFavArea">
+            <table width="93%">
+                <tr>
+                    <td rowspan="3" width="63%">
+                        <div style="display:block; padding-right: 4px;">
+                            <div style="display: block; width: 100%;">
+                                <textarea id="giComment" style="width:100%;" rows=5>
+                                </textarea>
+                            </div>
+                        </div>
+                    </td>
+                    <td style='vertical-align: top;'>
+                        <input type="checkbox" id="giFav"/> <?=$i18n->get('gameInfo', 'addToFavorites')?>
+                    </td>
+                </tr>
+                <tr style='vertical-align: top;'>
+                    <td style='padding-left: 3px;'>
+                        <div style="margin-top: 5px; float: left;" class="constantWidthBtn" id="giCommit">
+                            <?=$i18n->get('gameInfo', 'commitBtnLabel')?>
+                        </div>
+                        <div style="margin-top: 5px; float: left;" class="constantWidthBtn" id="giCancel">
+                            <?=$i18n->get('gameInfo', 'cancelBtnLabel')?>
+                        </div>
+                    </td>
+                </tr>
+                <tr id="giShowSolutionLayoutRow">
+                    <td style='padding-left: 3px;'>
+                        <div style="margin-right: 20px;" class="constantWidthBtnIB" id="showSolution"
+                             style="margin-top: 5px;"><?=$i18n->get('gameInfo', 'peekSolution')?>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div id="gameInfoContents"></div>
+</div>

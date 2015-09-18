@@ -1,0 +1,53 @@
+#main-wrapper{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+#app-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 30px;
+}
+
+.lg-unwrapped #bottom-block {
+    margin-top: 15px
+}
+
+.lg-unwrapped #left-block {
+    margin-right: 15px;
+}
+
+.lg-unwrapped #right-block {
+    margin-left: 15px;
+}
+
+#info-block {
+    margin-top: 15px;
+}
+
+#game-field{
+
+}
+
+#under-field{
+    position: relative;
+}
+
+#bottom-block{
+    margin: 0 0 0 0;
+    position: relative;
+}
+
+#info-block{
+    margin-top: 15px;
+    text-align: center;
+}
+
+.lg-row {
+    display: table-row;
+}
+
+.lg-cell {
+    display: table-cell;
+}

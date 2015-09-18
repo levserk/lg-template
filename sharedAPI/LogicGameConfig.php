@@ -1,0 +1,37 @@
+<?php
+
+define("KOSYNKA_ID", 1);
+define("KOSYNKA_3C_ID", 1);
+define("FREECELL_ID", 2);
+define("CHESS_ID", 3);
+define("SPIDER_4S_ID", 4);
+define("SPIDER_1S_ID", 5);
+define("SPIDER_2S_ID", 6);
+define("SOKOBAN_ID", 7);
+define("GOMOKU_ID", 8);
+define("TESTS_ID", 9);
+define("KOSYNKA_1C_ID", 10);
+define("BAKER_ID", 11);
+define("SUDOKU_ID", 12);
+define("SKIFF_ID", 13);
+define("POKER_ID", 14);
+define("SPEED_ID",15);
+define("MEMORY_ID",16);
+define("CHECKERS_ID",17);
+define("BATTLESHIP_ID",18);
+define("LINES_ID",19);
+define("RSP_ID",20);
+define("OTHELLO_ID",21);
+define("TETRIS_ID",22);
+define("MATCH3_ID",23);
+define("ARKANOID_ID",24);
+define("DOTS_ID",25);
+define("BACKGAMMON_ID",26);
+define("PYRAMID_ID",27);
+define("FOOL_ID",28);
+define("SNAKE_ID",29);
+define("BALDA_ID",30);
+define("MINESWEEPER_ID",31);
+define("NIM_ID",32);
+define("PACMAN_ID", 33);
+define("MAT_ID", 34);

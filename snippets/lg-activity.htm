@@ -1,0 +1,61 @@
+<?php
+    require_once($_SERVER['DOCUMENT_ROOT'] . "/sharedAPI/LogicGameStatisticsAPI.php");
+
+    $visitorStats = $s->getVisitorStats();
+    $g = LogicGameStatistics::getGameByGVID($s->getGameVariationId());
+    $gameStatisticsId = $g['gameStatisticsId'];
+        /*
+    if (isset($isVk) && $isVk){
+        include('lg-vkgroup.htm');
+    } else {
+        if ($s->getGameVariationId() != NIM_ID &&
+            $s->getGameVariationId() != MINESWEEPER_ID &&
+            $s->getGameVariationId() != BALDA_ID &&
+            $s->getGameVariationId() != MEMORY_ID &&
+            $s->getGameVariationId() != BATTLESHIP_ID &&
+            $s->getGameVariationId() != CHESS_ID &&
+            $s->getGameVariationId() != OTHELLO_ID &&
+            $s->getGameVariationId() != CHECKERS_ID &&
+            $s->getGameVariationId() != TESTS_ID &&
+            $s->getGameVariationId() != DOTS_ID &&
+            $s->getGameVariationId() != SKIFF_ID &&
+            $s->getGameVariationId() != POKER_ID
+        ){
+            echo '<div class="lg-vkgroup-wrapper" style="position: relative">';
+            include('lg-vkgroup.htm');
+            echo '</div>';
+        }
+    }
+        */
+?>
+<div id="activityDiv">
+    <?php if ($s->isSuperUser()) echo'<a id="activity" href="/stats?gameVariationId='.$gameStatisticsId.'" class="transpLink" target="_top"><p>'.generateActivityString($s).'</p></a>';
+        else echo '<p>'.generateActivityString($s).'</p>';
+    ?>
+</div>
+<div id="vstats">
+    <p><?php
+
+    echo $i18n->format("footer", "visitors", $visitorStats['yesterday'], $visitorStats['today']);
+
+        ?>
+    </p>
+</div>
+<div id="copyright">&copy;
+    <?=$i18n->get("footer", "copyright")?>
+
+    <!--<script type="text/javascript">&lt;!&ndash;-->
+    <!--document.write("<img src='//counter.yadro.ru/hit?t39.5;r" +-->
+            <!--escape(document.referrer) + ((typeof(screen) == "undefined") ? "" :-->
+            <!--";s" + screen.width + "*" + screen.height + "*" + (screen.colorDepth ?-->
+                    <!--screen.colorDepth : screen.pixelDepth)) + ";u" + escape(document.URL) +-->
+            <!--";" + Math.random() +-->
+            <!--"' " +-->
+            <!--"border='0' width='1' height='1'>")-->
+    <!--//&ndash;&gt;</script>-->
+</div>
+
+<?php
+    require_once "../counter/ym_counter.php";
+    require_once("../stats/save_visit.php");
+?>

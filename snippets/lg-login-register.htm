@@ -1,0 +1,242 @@
+<!-- welcome panel !-->
+<div class="bubblePanel _hackOverFieldPanel" id="welcomePanel">
+    <div class="overFieldInnerPanel">
+
+        <h4 style="margin-top: 3px; margin-bottom: 13px; text-align: center;">
+            <?=$i18n->format("loginRegister.welcome", "guestWelcomeMsg", "")?>
+        </h4>
+
+        <table style="margin-bottom: 5px; width: 100%;" cellspacing="5px">
+            <tr>
+                <td class="constantWidthTd" id="wpReg" style="width: 25%;">
+                    <div style='color: #C42E21; font-weight: bold;' class="lrWelcomeBtnText">
+                        <?=$i18n->get("loginRegister.welcome", "regOption")?>
+                    </div>
+                    <span class='lrWelcomeHint'><?=$i18n->get("loginRegister.welcome", "regOptionHint")?> </span>
+                </td>
+                <td class="constantWidthTd" id="wpLogin" style="width: 25%;">
+                    <div style='font-weight: bold; color: #444;' class="lrWelcomeBtnText">
+                        <?=$i18n->get("loginRegister.welcome", "loginOption")?>
+                    </div>
+                    <span class='lrWelcomeHint'><?=$i18n->get("loginRegister.welcome", "loginOptionHint")?></span>
+                </td>
+                <td class="constantWidthTd" id="wpVK" style="width: 25%;">
+                    <div style='font-weight: bold; color: #444;' class="lrWelcomeBtnText">
+                        <p style="margin-top: 2px;margin-bottom: 4px;"> Войти через</p> <img src="/img/icons/vk_logo.png">
+                    </div>
+                </td>
+                <td class="constantWidthTd" id="wpClose" style="width: 25%;">
+                    <div style='font-weight: bold; color: #444;' class="lrWelcomeBtnText">
+                        <?=$i18n->get("loginRegister.welcome", "skipOption")?>
+                    </div>
+                    <span class='lrWelcomeHint'><?=$i18n->get("loginRegister.welcome", "skipOptionHint")?></span>
+                </td>
+            </tr>
+        </table>
+        <div id="WelcomePanelContainer">
+
+            <div style="padding-top: 10px;" id="lrLoginSection" class="lrSection">
+                <h4><?=$i18n->get("loginRegister.login", "header")?></h4>
+                <!--<span class="lrHeaderHint"><?=$i18n->get("loginRegister.login", "hint")?></span>-->
+
+                <form id="loginForm" method="POST" action="#">
+                    <input type="hidden" name="action" value="login">
+                    <input type="hidden" name="sessionId" id="hfSessionId" value="">
+                    <input type="hidden" name="userId" id="hfUserId" value="">
+                    <table style="margin-top: 5px;" width="100%">
+                        <tr>
+                            <td width="10%"><?=$i18n->get("loginRegister.login", "usernameLabel")?></td>
+                            <td width="10%">
+                                <input id="loginUsername" name="login"  tabindex="1"/>
+                            </td>
+                            <td rowspan="3" style="vertical-align: top;">
+                                <div style="float: left;" id="loginResult"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><?=$i18n->get("loginRegister.login", "passwdLabel")?></td>
+                            <td><input type="password" id="loginPasswd" name="password"  tabindex="2"/></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="padding-top: 5px;">
+                                <input class="lrRememberCheckBox" name="remember" value="1" type="checkbox" checked>
+                                <?=$i18n->get("loginRegister.login", "rememberMeLabel")?>
+                            </td>
+                        </tr>
+                    </table>
+                    <br/>
+
+                    <div style="margin-bottom: 32px;">
+                        <div class="constantWidthBtn" id="loginCommit" tabindex="3">
+                            <?=$i18n->get("loginRegister.login", "loginBtnLabel")?>
+                        </div>
+                        <p class="msgShort" id="restorePass" style="float: right;">Забыли пароль?</p>
+                    </div>
+                </form>
+
+            </div>
+
+            <div style="padding-top: 10px;" id="lrRegisterSection" class="lrSection">
+                <h4><?=$i18n->get("loginRegister.reg", "header")?></h4>
+                <!--<span class="lrHeaderHint"><?=$i18n->get("loginRegister.reg", "hint")?></span>-->
+
+                <form id="regForm" method="post" action="#" autocomplete="off">
+                    <table style="margin-top: 5px;">
+                        <tr>
+                            <td>
+                                <?=$i18n->get("loginRegister.reg", "usernameLabel")?>
+                            </td>
+                            <td><input type="text" id="regUsername" name="login" autocomplete="off"/></td>
+                            <td>
+                                <div id="usernameAlert"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <?=$i18n->get("loginRegister.reg", "passwdLabel")?>
+                            </td>
+                            <td><input type="password" id="regPasswd" name="password"/></td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <?=$i18n->get("loginRegister.reg", "passwdConfirmationLabel")?>
+                            </td>
+                            <td><input type="password" id="regPasswdVerification"/></td>
+                            <td>
+                                <div id="passwdAlert"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <div id="regResult"></div>
+                            </td>
+                        </tr>
+                    </table>
+                    <br/>
+
+
+                    <div style="margin-bottom: 32px;">
+                        <div class="constantWidthBtn" id="regMeBtn">
+                            <?=$i18n->get("loginRegister.reg", "regBtnLabel")?>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div style="padding-top: 10px;" id="lrGuestSection" class="lrSection">
+                <p>Вы можете играть как <span id='guestName'></span>.</p>
+                <p>В этом случае Вы не сможете пользоваться личным кабинетом и Вам будет не доступна история игр с другого компьютера.</p>
+                <div class="constantWidthBtn" id="guestContinue">Продолжить</div>
+                <br>
+            </div>
+
+            <div style="padding-top: 10px;" class="lrSection" id="restorePassPanel">
+                <h4>Восстановление пароля</h4>
+                <span class="lrHeaderHint">На почту, указанную в профиле, будет отправлен новый пароль</span>
+                            <form id="rpForm" method="POST" action="#">
+                                <input type="hidden" name="action" value="login">
+                                <table style="margin-top: 5px;" width="100%">
+                                    <tr>
+                                        <td width="10%"><?=$i18n->get("loginRegister.login", "usernameLabel")?></td>
+                                        <td width="10%">
+                                            <input id="rpUsername" name="login"/>
+                                        </td>
+                                        <td rowspan="3" style="vertical-align: top;">
+                                            <div style="float: left;" id="rpResult"></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Электронная почта</td>
+                                        <td><input id="rpMail" name="mail"/></td>
+                                    </tr>
+                                </table>
+                                <br/>
+
+                                <div style="margin-bottom: 32px;">
+                                    <div class="constantWidthBtn" id="rpCommit">
+                                        Отправить
+                                        <!--<input type="submit" style="display: none;"/>-->
+                                    </div>
+                                    <div class="constantWidthBtn" id="rpCancel">
+                                        <?=$i18n->get("loginRegister.login", "cancelBtnLabel")?>
+                                    </div>
+                                </div>
+                            </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="welcomeOverlay"></div>
+<!-- end of welcome panel -->
+
+<!-- login panel !-->
+<div class="bubblePanel _hackOverFieldPanel" id="loginRegisterPanel">
+    <img id="lrCloseIcon" class="closePanelIcon iconPadding" alt="<?=$i18n->get('loginRegister', 'closeIconAltText')?>"
+         src="/img/icons/icon_close.png">
+
+    <div class="overFieldInnerPanel">
+        <h2 class="lrCommonHeader"><?=$i18n->get("loginRegister", "header")?></h2>
+
+        <div id="lrLoginRegisterContainer">
+
+
+
+
+        </div>
+    </div>
+</div>
+<!-- end of register panel -->
+
+<!-- restore password panel !-->
+
+<!-- end of register panel -->
+
+<!-- change password panel !-->
+<div class="bubblePanel _hackOverFieldPanel" id="changePassPanel">
+    <img id="cpCloseIcon" class="closePanelIcon iconPadding" alt="<?=$i18n->get('loginRegister', 'closeIconAltText')?>"
+         src="/img/icons/icon_close.png">
+
+    <div class="overFieldInnerPanel">
+        <h2 class="lrCommonHeader">Смена пароля</h2>
+
+        <div id="cpLoginRegisterContainer">
+
+            <div style="padding-top: 10px;" id="cpSection" class="lrSection">
+                <form id="cpForm" method="POST" action="#">
+                    <input type="hidden" name="action" value="login">
+                    <table style="margin-top: 5px;" width="100%">
+                        <tr>
+                            <td width="35%">Старый пароль</td>
+                            <td width="35%">
+                                <input type="password" id="cpOldPassword" name="cpOldPassword"/>
+                            </td>
+                            <td rowspan="3" style="vertical-align: top;">
+                                <div style="float: left;" id="cpResult"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Новый пароль</td>
+                            <td><input type="password" id="cpNewPassword1" name="cpNewPassword1"/></td>
+                        </tr>
+                        <tr>
+                            <td>Повторите новый пароль</td>
+                            <td><input type="password" id="cpNewPassword2" name="cpNewPassword2"/></td>
+                        </tr>
+                    </table>
+                    <br/>
+
+                    <div style="margin-bottom: 32px;">
+                        <div class="constantWidthBtn" id="cpCommit">
+                            Ок
+                        </div>
+                        <div class="constantWidthBtn" id="cpCancel">
+                            <?=$i18n->get("loginRegister.login", "cancelBtnLabel")?>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end of change password panel -->

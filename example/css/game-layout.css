@@ -1,0 +1,30 @@
+#gameField {
+
+}
+
+#gameSection {
+    background: url(//logic-games.spb.ru/sudoku/img/desc/wood1.jpg);
+    border: 2px solid #064c07;
+    width: 620px;
+    height: 600px;
+}
+
+.controlPanel {
+    background: #F0F0F0;
+}
+
+#left{
+    /*width: 300px;*/
+    /*height: 500px;*/
+    background-color: #FFF3A7;
+}
+
+#right{
+    /*width: 50px;*/
+    /*height: 200px;*/
+    background-color: #AFA7FF;
+}
+
+#bottom-block{
+    margin: 0 186px 0 186px;
+}
