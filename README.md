@@ -15,7 +15,7 @@ $gvId = YOUR_GAME_ID;
 include('../snippets/lg-template-local.inc');
 
 // продакшн:
-// include('../snippets/lg-template-local.inc');
+// include('../snippets/lg-template.inc');
 ```
 в папке игры **snippets** должны лежать только нужные файлы которые будут вставлены в соответсвующие блоки шаблона
 список возможных файлов:
