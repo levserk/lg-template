@@ -2,6 +2,20 @@
 ini_set ( "display_errors", "1");
 ini_set ( "display_startup_errors", "1");
 ini_set ( "html_errors", "1");
+
+function shutdown()
+{
+    $err = error_get_last();
+    if ($err){
+        echo '<br>=========== error:<br>';
+        print_r(error_get_last());
+    }
+
+    echo '', PHP_EOL;
+}
+
+//register_shutdown_function('shutdown');
+
 $v = '10';
 $lang = "ru";
 $isVk = false;
@@ -9,8 +23,8 @@ $isFb = false;
 $refresh = false;
 $displayLogged = " style='display: none;'";
 $displayNotLogged = "";
-require("../SharedAPI/LogicGameI18n.php");
-require("../SharedAPI/lang/Lang.$lang.php");
+require("../sharedAPI/LogicGameI18n.php");
+require("../sharedAPI/lang/Lang.$lang.php");
 
 $i18n = new LogicGameI18n($locale, $gvId);
 ?>
@@ -106,7 +120,7 @@ $i18n = new LogicGameI18n($locale, $gvId);
     </div>
 </div>
 <?php
-    @include 'snippets/footer.inc'
+    @include 'snippets/footer.inc';
 ?>
 </body>
 </html>
