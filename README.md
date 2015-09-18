@@ -10,7 +10,8 @@
 ``` php
 
 $pageTitle = 'example';
-$gvId = YOUR_GAME_ID;
+$gvId = YOUR_GAME_ID; // число
+$sign = 'your sign';
 
 include('../snippets/lg-template-local.inc');
 
