@@ -7,6 +7,7 @@
     var _sessionId = "<?php echo $s->getSessionId(); ?>";
     var _userId = <?php echo $s->getUserId(); ?>;
     var _username = "<?php echo $s->getUsername(); ?>";
+    var _sign = "<?php echo $s->getSign($sign);  ?>";
     var _isGuest = <?php if ($s->isGuest()) echo "true"; else echo "false"; ?>;
     var _lang = '<?php echo $lang ?>';
     var _gameVariationId = <?php echo $s->getGameVariationId(); ?>;
@@ -38,6 +39,9 @@ if (isset($loadMain) && $loadMain){
 }
 
 echo "<script type='text/javascript' src='/js/lang/lang.".$lang.".js?v=$v'></script> \n\r";
+
+echo '<script src="/js/shared/lg-facebook.js" type="text/javascript"></script>';
+
 echo "<link media='screen' href='/css/build/shared.css?v=$v' rel='stylesheet' type='text/css'>\n\r";
 echo "<link media='screen' href='/css/shared/lg-layout.css?v=$v' rel='stylesheet' type='text/css'>\n\r";
 ?>

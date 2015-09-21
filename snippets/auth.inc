@@ -46,3 +46,7 @@ if (!$s->isGuest()) {
     $displayLogged = " style='display: none;'";
     $displayNotLogged = "";
 }
+
+if (!isset($sign)) {
+    $sign = '';
+}
