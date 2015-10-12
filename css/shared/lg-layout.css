@@ -1,13 +1,33 @@
+html {
+    height: initial !important;
+    width:100vw;
+    overflow-x:hidden;
+}
+
 #main-wrapper{
     width: 1000px;
     margin: 0 auto;
+    padding-top: 30px;
+}
+
+#main-wrapper.isVk{
+    padding-top: 0;
 }
 
 #app-container{
-    display: flex;
+    display:-webkit-box;
+    display:-webkit-flex;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-justify-content: center;
     justify-content: center;
     flex-direction: row;
-    margin-top: 30px;
+    -webkit-flex-direction:row;
+    -ms-flex-direction:row;
+}
+
+.isVk #app-container{
+
 }
 
 .lg-unwrapped #bottom-block {
@@ -20,10 +40,6 @@
 
 .lg-unwrapped #right-block {
     margin-left: 15px;
-}
-
-#info-block {
-    margin-top: 15px;
 }
 
 #game-field{
@@ -42,6 +58,51 @@
 #info-block{
     margin-top: 15px;
     text-align: center;
+    font-family: 'Times New Roman';
+    font-size: 17px;
+}
+
+#description {
+    display: none;
+    position: relative;
+    width: 800px;
+    margin: 0 auto;
+}
+
+#description .description-wrapper {
+    padding: 10px 10px 10px 10px;
+    font-family: Verdana;
+    font-size: 13px;
+    position: absolute;
+    background: white;
+    border-radius: 12px;
+    z-index: 10000;
+    box-shadow: 0 0 15px;
+}
+
+#description .description-wrapper h4,h3,h2,h1{
+    text-align: center;
+}
+
+#description .description-wrapper h3{
+    text-align: center;
+    font-size: 9pt;
+}
+
+#description .description-wrapper p{
+    text-indent: 15px;
+}
+
+#description .description-wrapper img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+#closeDescription {
+    position: absolute;
+    right: 4px;
+    top: 4px;
 }
 
 .lg-row {

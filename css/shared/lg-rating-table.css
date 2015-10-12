@@ -1,0 +1,227 @@
+.stats-area {
+    font-family: Verdana, Geneva, sans-serif;
+    background: #fff;
+}
+
+#close_icon, #dialog_close_icon {
+    position: absolute;
+    float: right;
+    margin-top: -10px;
+    right: 14px;
+    cursor: pointer
+}
+
+#history_close_icon, #rating_close_icon, #history_days_close_icon {
+    float: right;
+    cursor: pointer;
+    margin: 0px 0px 8px 0px;
+}
+
+.rating-table thead th {
+    cursor: pointer
+}
+
+.rating-table thead th:nth-child(-n+6):not(:first-child) {
+    border-right: 1px solid #dcdcdc
+}
+
+.rating-table tr td:nth-child(1) {
+    width: 15px
+}
+
+.rating-table tr td:nth-child(2) {
+    width: 32%;
+    vertical-align: bottom
+}
+
+.rating-table tr td:nth-child(3) {
+    vertical-align: bottom
+}
+
+.rating-table td:nth-child(4) {
+    text-align: left
+}
+
+.rating-table td:nth-child(5) {
+    text-align: center;
+    width: 20px
+}
+
+.rating-table td:nth-child(6) {
+    text-align: left
+}
+
+.history-table td, .history-table thead th, .history-days-table thead th {
+    border-right: 1px solid #dcdcdc;
+    padding: 5px
+}
+
+.rating-table td:first-child {
+    text-align: right;
+    vertical-align: bottom
+}
+
+.history-table thead th, .rating-table thead th, .history-days-table thead th {
+    height: 26px;
+    font-weight: 400;
+    color: #444
+}
+
+.rating-table td:nth-child(2) {
+    text-align: left
+}
+
+.rating-table td:nth-child(2) span {
+    cursor: pointer
+}
+
+.rating-table td:nth-child(2) span:hover {
+    text-decoration: underline
+}
+
+.rating_link_active {
+    text-decoration: none;
+    color: #069;
+    font-size: 12px;
+    font-weight: 700
+}
+
+.rating_link_unactive {
+    cursor: pointer;
+    text-decoration: none;
+    color: #069;
+    font-size: 12px;
+    border-bottom: 1px solid #069;
+}
+
+.rating-table tr td {
+    vertical-align: middle !important
+}
+
+
+.chat-button {
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+    white-space: nowrap;
+    height: 28px;
+    line-height: 28px;
+    min-width: 64px;
+    outline: 0;
+    display: inline-block
+}
+
+.chat-button-unactive {
+    color: gray !important
+}
+
+.chat-cancel, .chat-post {
+    -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, .05);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, .05);
+    background-color: #fff;
+    background-image: -webkit-linear-gradient(top, transparent, transparent);
+    background-image: linear-gradient(top, transparent, transparent);
+    color: #404040;
+    border: 1px solid rgba(0, 0, 0, .15)
+}
+
+.chat-post.cpressed {
+    background-color: #f7f791
+}
+
+.rplayer-online {
+    background-color: #EFF9DB
+}
+
+.rplayer-active {
+    background-color: #D7FACF
+}
+
+.player-online-idle {
+    background-color: #EFF9DB
+}
+
+
+.rating-loading-spinner {
+    margin: 0 50%;
+    top: 50px
+}
+
+.history-table, .rating-table, .history-days-table {
+    font-size: 8pt;
+    text-align: center;
+    border-collapse: collapse;
+    border: 1px solid #dcdcdc;
+    width: 100%;
+    color: #444;
+    margin-top: 5px;
+}
+
+.history-table thead, .rating-table thead, .history-days-table thead {
+    background-color: #EEE;
+    border-bottom: 1px solid #dcdcdc
+}
+
+.rating-table td, .history-table td {
+    border-bottom: 1px solid #dcdcdc;
+    border-top: 1px solid #dcdcdc;
+    padding: 5px
+}
+
+.history-days-table td {
+    border-bottom: 1px solid #dcdcdc;
+    border-right: 1px solid #dcdcdc;
+    padding: 4px
+}
+
+.history-days-table .fav-icon {
+    float: left;
+    margin-top: 3px;
+    position: absolute
+}
+
+#rating-autocomplete:hover {
+    border: 1px solid #4D90FE;
+    transition: border 300ms ease-out;
+    -webkit-transition: border 300ms ease-out;
+    -moz-transition: border 300ms ease-out;
+    -o-transition: border 300ms ease-out;
+
+}
+
+#rating-autocomplete {
+    width: 100px;
+    margin-left: 7px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    cursor: text;
+
+    padding: 3px 4px;
+    word-wrap: break-word;
+    text-align: left;
+    overflow: hidden;
+    float:left
+}
+
+.rating-table-greycol{
+    color: #AAA;
+}
+
+.rating-table-clickcol{
+    cursor: pointer;
+}
+
+.rating-table-clickcol:hover{
+    background-color: #F7F7F7;
+}
+
+.greenSup {
+    color: green;
+}
+
+.bold {
+    font-weight: 700;
+}

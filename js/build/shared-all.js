@@ -1,4 +1,4 @@
-/*! 2015-09-18 */
+/*! 2015-10-12 */
 var KEY_ESC = 27;
 
 var KEY_A = 65;
@@ -1189,6 +1189,10 @@ var Resizer = function (wrapper){
 
     setNewIframeSize();
 
+
+    $(window).resize(function(){
+        setNewIframeSize();
+    });
     setInterval(function () {
         if (wrapper.height() != oldHeight){
             setNewIframeSize();
@@ -1196,7 +1200,9 @@ var Resizer = function (wrapper){
     },100);
 
     function setNewIframeSize() {
-        console.log('Resizer setNewIframeSize', oldHeight, wrapper.height());
+        width = wrapper.width();
+        width = width > 1000 ? 1000 : width;
+        console.log('Resizer setNewIframeSize', oldHeight, $('body').height(), width);
         oldHeight = wrapper.height();
         window.VK.callMethod("resizeWindow", width, oldHeight);
     }
@@ -1219,28 +1225,37 @@ $(document).ready(function () {
     var idField = document.getElementById('under-field') ? '#under-field' : '#field';
     var $field = $(idField);
     if (window._lang && !window._isFb && !window._isVk) {
-        var lang, langTitle, $a = $('<a>')
-        if (window._lang == 'en') {
-            lang = 'ru';
-            langTitle = 'РУ';
-        } else {
-            lang = 'en';
-            langTitle = 'EN';
-        }
-
-        $a.html(langTitle).attr("href", "?lang=" + lang).addClass('switchLocale');
-        $field.append($a);
-        $a.css({
-            top: $field.height()  + 8,
-            left: $field.width() + 20,
-            position: 'absolute'
-        });
+        //var lang, langTitle, $a = $('<a>');
+        //if (window._lang == 'en') {
+        //    lang = 'ru';
+        //    langTitle = 'РУ';
+        //} else {
+        //    lang = 'en';
+        //    langTitle = 'EN';
+        //}
+        //
+        //$a.html(langTitle).attr("href", "?lang=" + lang).addClass('switchLocale');
+        //$field.append($a);
+        //$a.css({
+        //    top: $field.height()  + 8,
+        //    left: $field.width() + 20,
+        //    position: 'absolute'
+        //});
+    }
+    if (window._isVk){
+        try{
+           $('.lg-vkgroup').appendTo(document.body).css(
+               {
+                   right: '3px', bottom: '3px', top: 'auto'
+               }
+           )
+        } catch(e){}
     }
     if (window._lang && window._lang != 'ru'){
         $('.lg-vkgroup').hide();
-    } else if (!window._isVk){
-        $field.append ($('.lg-vkgroup').css({ top: $field.height()  -52, left: $field.width() + 19}));
     }
+
+    if (window._isIframe) $('a[href^="/"]').attr('target','_blank');
 });
 function SafeSharedUI() {
     var that = this;
@@ -1254,10 +1269,35 @@ function SafeSharedUI() {
         } else {
             $(id).empty().append("<p class='errorMsg'>" + i18n.get("unknownLoadingErrorNotice") + "</p>");
         }
-    }
+    };
+
+    this.initGameInfo = function(){
+
+        that.showDescription = function(){
+            $('#description').show();
+            $('#main-wrapper').css('min-height', $('#description .description-wrapper').height()+5+'px');
+            //$('#app-container').hide();
+            //$('#bottom-block').hide();
+        };
+
+        that.hideDescription = function(){
+            $('#description').hide();
+            $('#main-wrapper').css('min-height', '');
+        };
+
+        $('#showDescription').click(that.showDescription);
+        $('#openDescription').click(that.showDescription);
+        $('#closeDescription').click(that.hideDescription);
+    };
+
+    this.initGameInfo();
+
+    console.log('hi, im safeshared ui');
 }
 
 function SharedUI() {
+
+    console.log('hi, im shared ui');
     var that = this;
 
     var gc;
@@ -4276,7 +4316,7 @@ function PlayerProfile(_gc, _ui) {
         cs.loadConversations(function (result, conversations) {
             var messagesContent = "<div class='pmCP'>";
             messagesContent += "<h4 class='pmShowInbox nonSelectable' id='pmShowInbox'>" + i18n.get("inboxHeader") + "</h4>";
-            messagesContent += "<h4 class='pmShowOutbox activeOption nonSelectable' id='pmSendMsg'>" + i18n.get("sendMsgMenuAction") + "</h4>";
+            //messagesContent += "<h4 class='pmShowOutbox activeOption nonSelectable' id='pmSendMsg'>" + i18n.get("sendMsgMenuAction") + "</h4>";
             messagesContent += "</div>";
 
             messagesContent += "<img src='/img/icons/loading.gif' class='profileLoadingIcon' id='pmInboxLoadingIcon' />";
@@ -4509,8 +4549,19 @@ function PlayerProfile(_gc, _ui) {
             $("#profilePIEditable").show();
         });
 
-        $("#profilePhotoField").change(function () {
-            that.preuploadPhoto();
+        $("#profilePhotoField").change(function (evt) {
+            var files = evt.target.files; // FileList object
+
+            // Loop through the FileList and render image files as thumbnails.
+            for (var i = 0, f; f = files[i]; i++) {
+
+                // Only process image files.
+                if (!f.type.match('image.*')) {
+                    continue;
+                }
+                that.preuploadPhoto(f);
+            }
+
         });
 
         $("#profileSaveBtn").click(function () {
@@ -4565,21 +4616,23 @@ function PlayerProfile(_gc, _ui) {
         });
     }
 
-    this.preuploadPhoto = function () {
-        $("#profileLoadingImg").show();
+    this.preuploadPhoto = function (f) {
 
-        cs.preuploadPhoto(function (result, response) {
-            $("#profileLoadingImg").hide();
+        var reader = new FileReader();
 
-            if (result) {
+        reader.onload = (function (theFile) {
+            return function (e) {
                 $("#profilePhotoFrame").css("border", "none");
                 $("#profilePhotoFrame").empty().append(
                     "<img class='profilePhoto'"
-                        + "src='" + response.thumbFilename + "'/>");
-
+                    + "src='" + e.target.result + "'/>");
                 preuploaded = true;
-            }
-        });
+            };
+        })(f);
+
+
+        reader.readAsDataURL(f);
+
     }
 
     this.bindActions = function (profile) {
@@ -8111,7 +8164,7 @@ var RatingRender = (function(){
                 data.username = data.username.substr(0,20);
                 var photo = '';
                 if (isDef(data.photo) && !!data.photo){
-                    if (data.photo.substring(0,4) != "http") data.photo = '/images/profile/' + data.photo;
+                    if (data.photo.substring(0,4) != "http") data.photo = '/gw/profile/image.php?user_id=' + data.userid;
                     photo =  Template.get("rating/div_phot.html", data);
                 }
                 return Template.get("rating/td.html?v=1",{id:column.id,cclass:'',style:'',title:'', other:_userid+'="'+data.userid+'"',
@@ -8644,7 +8697,7 @@ var LogicGame = function(){
             guestBookRenderer.run();
         }
 
-        //console.log('UI', this.userProfile.updateUnreadMsgCount);
+       //console.log('UI', this.userProfile.updateUnreadMsgCount);
     }
 
     function ready() {
@@ -8666,6 +8719,8 @@ var LogicGame = function(){
             if (_isGuest) ui.setGuestUI(); else ui.setUserUI();
         }
         if (func) func();
+
+        if (window._isIframe) $('a[href^="/"]').attr('target','_blank');
     }
 
     return {

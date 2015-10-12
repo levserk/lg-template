@@ -1,7 +1,7 @@
 <meta charset="UTF-8">
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title><?php if(isset($pageTitle)) echo $pageTitle ?></title>
+<title><?php echo $i18n->get("page", "title") ?></title>
 
 <script type="text/javascript">
     var _sessionId = "<?php echo $s->getSessionId(); ?>";
@@ -13,6 +13,7 @@
     var _gameVariationId = <?php echo $s->getGameVariationId(); ?>;
     var _isVk = <?php echo $isVk?'true':'false'; ?> ;
     var _isFb = (window.location!=top.location&&!_isVk);
+    var _isIframe = (window.location!=top.location);
     var _FB_ID = '<?php echo $isVk?"":$fbAuth->appId ?>';
     var _isFreshUser = <?php echo $isFreshUser?'true':'false'; ?>;
 </script>

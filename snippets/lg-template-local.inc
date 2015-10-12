@@ -72,6 +72,17 @@ $i18n = new LogicGameI18n($locale, $gvId);
     @include 'snippets/top.inc'
 ?>
 <div id="main-wrapper" class="lg-unwrapped">
+    <div id="description">
+        <div class="description-wrapper">
+            <img id="closeDescription" src="/img/icons/icon_close.png" alt=""/>
+            <div class="description-container">
+                <?php
+                if(is_file('snippets/description.inc'))
+                    @include 'snippets/description.inc'
+                ?>
+            </div>
+        </div>
+    </div>
     <div id="app-container">
             <div id="left-block" >
                 <?php
@@ -82,11 +93,6 @@ $i18n = new LogicGameI18n($locale, $gvId);
                 <?php
                     include '../snippets/lg-login-register.htm';
                 ?>
-                <div id="description">
-                    <?php
-                        @include 'snippets/description.inc'
-                    ?>
-                </div>
                 <div id="game-field">
                     <?php
                         @include 'snippets/field.inc'

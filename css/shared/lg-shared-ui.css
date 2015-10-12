@@ -1,0 +1,149 @@
+.controlPanel {
+    height: 42px;
+}
+
+.controlPanelLayout {
+    width: 100%;
+    height: 100%;
+}
+
+.cpButton {
+    border: 1px solid #AAAAAA;
+    font-family: Verdana;
+    font-size: 8pt;
+    font-weight: normal;
+    height: 100%;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    width: 16.67%;
+
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -khtml-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.cpNormal {
+
+}
+
+.cpNormal:hover {
+    background: #E7E7E7; /*  !important */
+}
+
+.cpKillHover:hover {
+    background: none !important;
+}
+
+.cpHighlight {
+    background: none repeat scroll 0 0 #FFFFCA !important;
+}
+
+.cpHighlight:hover {
+    background: none repeat scroll 0 0 #FFFFB4 !important;
+}
+
+.closePanelImg {
+    cursor: pointer;
+    float: right;
+    position: absolute;
+    right: 6px;
+    top: 6px;
+}
+
+.simpleText {
+    color: #444;
+    text-decoration: none;
+    cursor: default;
+}
+
+.auxText {
+    color: #777;
+}
+
+.auxRow {
+    background-color: #EEE;
+}
+
+.secondLevelRow {
+    border-bottom: 1px solid #DDDDDD !important;
+}
+
+.bottomPanel {
+    background-color: white;
+}
+
+.purpleHighlight {
+    background-color: #EFCEEF !important;
+}
+
+.purpleHighlight:hover {
+    background-color: #EAC2EA !important;
+}
+
+.invisible {
+    display: none;
+}
+
+.roundedLeft4px {
+    -moz-border-radius-bottomleft: 4px;
+    -moz-border-radius-topleft: 4px;
+
+    -webkit-border-bottom-left-radius: 4px;
+    -webkit-border-top-left-radius: 4px;
+
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+}
+
+.roundedRight4px {
+    -moz-border-radius-bottomright: 4px;
+    -moz-border-radius-topright: 4px;
+
+    -webkit-border-bottom-right-radius: 4px;
+    -webkit-border-top-right-radius: 4px;
+
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.frozenTime {
+    color: cyan;
+}
+
+.errorMsg {
+    font-weight: bold;
+    padding-left: 15px;
+}
+
+#inviteFriend{
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    vertical-align: middle;
+    text-align: center;
+    border: 1px solid rgb(117, 117, 117);
+    color: rgb(206, 206, 206);
+    border-radius: 4px;
+    padding: 5px;
+    cursor: pointer;
+    width: 85px;
+}
+
+#welcomePanel {
+    z-index: 201;
+}
+
+#welcomeOverlay{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 200;
+    background: #333;
+    opacity: .4;
+}

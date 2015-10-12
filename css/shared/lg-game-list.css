@@ -1,0 +1,68 @@
+#closeGameListPanel {
+    position: absolute;
+    float: right;
+    right: 6px;
+    cursor: pointer;
+}
+
+#glLoadingImg {
+    display: none;
+    position: absolute;
+    float: left;
+    left: 6px;
+    width: 25px;
+}
+
+#gameListTable {
+    margin-top: 28px;
+}
+
+.glGameDetailContent {
+    display: none;
+    text-align: left;
+}
+
+.glRow, .gsRow {
+
+}
+
+.glShowMore, .glShowAll, .glPaginationStats {
+    cursor: pointer;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 13pt !important;
+    /*font-weight: bold;*/
+    text-decoration: underline;
+    color: #006699;
+}
+
+.glPaginationStats {
+    color: #CCC;
+    text-decoration: none;
+    text-align: center;
+}
+
+#glShowPanel {
+    padding-top: 5px;
+}
+
+.giLoadingMore {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 14pt !important;
+    cursor: default !important;
+    text-decoration: none !important;
+    color: #444 !important;
+}
+
+.glHeader {
+    font-size: 8pt;
+    padding-bottom: 5px;
+}
+
+.glHeaderDescr {
+    font-size: 7pt;
+    padding-bottom: 5px;
+    font-weight: normal !important;
+    color: #777;
+}

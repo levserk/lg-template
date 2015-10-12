@@ -1,0 +1,13 @@
+#network {
+    position: absolute;
+    right: 15px;
+    bottom: 9px;
+}
+
+#connProblem {
+    display: none;
+}
+
+#connOffline {
+    display: none;
+}

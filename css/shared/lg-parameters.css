@@ -1,0 +1,43 @@
+#dontServePlayedPanel {
+    margin-top: 10px;
+}
+
+#gpCloseIcon {
+    position: absolute;
+    float: right;
+    margin-top: 6px;
+    right: 6px;
+    cursor: pointer;
+}
+
+#parametersPanel {
+    display: none;
+    color: #444;
+    font-family: Verdana;
+    font-size: 10pt;
+    width: 555px !important;
+}
+
+.levelDescr {
+    color: #777;
+    font-size: 8pt;
+}
+
+.levelDescr p {
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+}
+
+.constantWidthBtnParams {
+    min-width: 105px;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    font-weight: normal;
+    font-family: Verdana;
+    font-size: 8pt;
+    border: 1px solid #AAA;
+    padding: 5px 9px 5px 9px;
+}

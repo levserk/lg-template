@@ -26,7 +26,43 @@ $locale = array(
     ),
     'page' => array(
         'title' => array(
-            KOSYNKA_ID => 'Пасьянс «Косынка» — играть онлайн'
+            KOSYNKA_ID => 'Пасьянс «Косынка» — играть онлайн',
+            FREECELL_ID => 'Пасьянс «Солитёр» — играть онлайн',
+            CHESS_ID => '«Шахматы» — играть онлайн',
+            SPIDER_1S_ID => 'Пасьянс «Паук» — играть онлайн',
+            SPIDER_2S_ID => 'Пасьянс «Паук» — играть онлайн',
+            SPIDER_4S_ID => 'Пасьянс «Паук» — играть онлайн',
+            SOKOBAN_ID => '«Сокобан» — играть онлайн',
+            GOMOKU_ID => '«Крестики-нолики» — играть онлайн',
+            TESTS_ID => '«Тест IQ» — играть онлайн',
+            KOSYNKA_1C_ID => 'Пасьянс «Косынка» — играть онлайн',
+            KOSYNKA_3C_ID => 'Пасьянс «Косынка» — играть онлайн',
+            BAKER_ID => 'Пасьянс «Дюжина пекаря» — играть онлайн',
+            SUDOKU_ID => '«Судоку» — играть онлайн',
+            SKIFF_ID => '«Лестница скифов» — играть онлайн',
+            POKER_ID => '«Покер» — играть онлайн',
+            SPEED_ID => '«Кто быстрее» — играть онлайн',
+            MEMORY_ID => '«Тест на память» — играть онлайн',
+            CHECKERS_ID => '«Шашки» — играть онлайн',
+            BATTLESHIP_ID => '«Морской бой» — играть онлайн',
+            LINES_ID => '«Шарики» — играть онлайн',
+            RSP_ID => '«Камень ножницы бумага» — играть онлайн',
+            OTHELLO_ID => '«Реверси» — играть онлайн',
+            TETRIS_ID => '«Тетрис» — играть онлайн',
+            MATCH3_ID => '«Три в ряд» — играть онлайн',
+            ARKANOID_ID => '«Арканоид» — играть онлайн',
+            DOTS_ID => '«Точки» — играть онлайн',
+            BACKGAMMON_ID => '«Нарды» — играть онлайн',
+            PYRAMID_ID => 'Пасьянс «Пирамида» — играть онлайн',
+            FOOL_ID => '«Дурак» — играть онлайн',
+            SNAKE_ID => '«Змейка» — играть онлайн',
+            BALDA_ID => '«Балда» — играть онлайн',
+            MINESWEEPER_ID => '«Сапер» — играть онлайн',
+            NIM_ID => '«Ним» — играть онлайн',
+            PACMAN_ID => '«Пакман» — играть онлайн',
+            MAT_ID => 'Пасьянс «Коврик» — играть онлайн',
+            THIPEAKS_ID => 'Пасьянс «Три пика» — играть онлайн',
+            EGEMATH_ID => '«ЕГЭ по математике» — играть онлайн'
         )
     ),
     'ui' => array(
@@ -37,22 +73,53 @@ $locale = array(
     ),
     'titleBand' => array(
         'title' => array(
-            KOSYNKA_ID => 'Пасьянс &laquo;Косынка&raquo;',
-            FREECELL_ID => 'Пасьянс &laquo;Солитёр&raquo;',
-            SPIDER_1S_ID => 'Пасьянс &laquo;Паук&raquo;',
-            SPIDER_2S_ID => 'Пасьянс &laquo;Паук&raquo;',
-            SPIDER_4S_ID => 'Пасьянс &laquo;Паук&raquo;',
-            SOKOBAN_ID => 'Cокобан',
+            KOSYNKA_ID => 'Косынка',
+            FREECELL_ID => 'Солитёр',
+            CHESS_ID => 'Шахматы',
+            SPIDER_1S_ID => 'Паук',
+            SPIDER_2S_ID => 'Паук',
+            SPIDER_4S_ID => 'Паук',
+            SOKOBAN_ID => 'Сокобан',
+            GOMOKU_ID => 'Крестики-нолики',
+            TESTS_ID => 'Тест IQ',
+            KOSYNKA_1C_ID => 'Косынка',
+            KOSYNKA_3C_ID => 'Косынка',
             BAKER_ID => 'Дюжина пекаря',
             SUDOKU_ID => 'Судоку',
-            PYRAMID_ID => 'Пасьянс &laquo;Пирамида&raquo;'
-
+            SKIFF_ID => 'Лестница скифов',
+            POKER_ID => 'Покер',
+            SPEED_ID => 'Кто быстрее',
+            MEMORY_ID => 'Тест на память',
+            CHECKERS_ID => 'Шашки',
+            BATTLESHIP_ID => 'Морской бой',
+            LINES_ID => 'Шарики',
+            RSP_ID => 'Камень ножницы бумага',
+            OTHELLO_ID => 'Реверси',
+            TETRIS_ID => 'Тетрис',
+            MATCH3_ID => 'Три в ряд',
+            ARKANOID_ID => 'Арканоид',
+            DOTS_ID => 'Точки',
+            BACKGAMMON_ID => 'Нарды',
+            PYRAMID_ID => 'Пирамида',
+            FOOL_ID => 'Дурак',
+            SNAKE_ID => 'Змейка',
+            BALDA_ID => 'Балда',
+            MINESWEEPER_ID => 'Сапёр',
+            NIM_ID => 'Ним',
+            PACMAN_ID => 'Пакман',
+            MAT_ID => 'Коврик',
+			THIPEAKS_ID => 'Три пика',
+            EGEMATH_ID => 'ЕГЭ по математике'
         ),
-        'description' => 'Описание',
+        'description' => 'Правила',
         'playOtherGamesLink' => 'Перейти на другие игры',
         'gbLink' => 'Вопросы и отзывы'
     ),
     'topCP' => array(
+        'view' => 'Просмотр',
+        'viewBack' => 'назад',
+        'viewForward' => 'вперед',
+        'takeBack' => 'Отменить<br>ход',
         'undo' => 'Ход назад',
         'redo' => 'Ход вперёд',
         'newGame' => 'Новая игра',
@@ -67,14 +134,14 @@ $locale = array(
         'suites' => 'масти',
     ),
     'gameplay' => array(
-        'winNotice' => 'Поздравляем,<br/>вы выиграли!',
+        'winNotice' => 'Поздравляем,<br/>Вы выиграли!',
         'markCard' => 'Пометить карту',
         'specMove' => 'Выберите карту или нажмите ESC для отмены.',
         'wonAttemptNotice' => 'Вы открыли выигранную попытку. Для просмотра решения используйте кнопки «Ход назад», «Ход вперёд» и/или стрелки на клавиатуре.',
         'backToGame' => 'Вернуться к своей игре'
     ),
     'loginRegister' => array(
-        'closeIconAltText' => 'Закрыть форму входа / ввода нового имени',
+        'closeIconAltText' => 'Закрыть',
         'header' => 'Войти в личный кабинет',
     ),
     'loginRegister.welcome' => array(
@@ -82,22 +149,23 @@ $locale = array(
         'regOption' => 'Регистрация',
         'regOptionHint' => 'только<br/>имя и пароль',
         'loginOption' => 'Войти',
-        'loginOptionHint' => 'если вы уже<br/>регистрировались',
+        'loginOptionHint' => 'если Вы уже<br/>регистрировались',
         'skipOption' => 'Играть как гость',
         'skipOptionHint' => 'без регистрации'
     ),
     'loginRegister.login' => array(
         'header' => 'Войти',
-        'hint' => 'если у вас уже есть имя и пароль',
+        'hint' => 'если у Вас уже есть имя и пароль',
         'usernameLabel' => 'Имя&nbsp;пользователя:',
         'passwdLabel' => 'Пароль:',
         'rememberMeLabel' => 'запомнить меня на этом компьютере',
         'loginBtnLabel' => 'Войти',
-        'cancelBtnLabel' => 'Отмена'
+        'cancelBtnLabel' => 'Отмена',
+		'forgotPasswdLabel' => 'Забыли пароль?'
     ),
     'loginRegister.reg' => array(
         'header' => 'Ввести новое имя',
-        'hint' => 'если у вас ещё нет имени и пароля',
+        'hint' => 'если у Вас ещё нет имени и пароля',
         'usernameLabel' => 'Имя&nbsp;пользователя:',
         'passwdLabel' => 'Пароль:',
         'passwdConfirmationLabel' => 'Повторите пароль:',
@@ -105,22 +173,22 @@ $locale = array(
         'cancelBtnLabel' => 'Отмена'
     ),
     'bottomCP' => array(
-        'parameters' => 'Параметры',
+        'parameters' => 'Настройки',
         'gameList' => 'Все расклады',
         'history' => 'История',
         'gameInfo' => 'О раскладе',
-        'rating' => 'Рейтинги игроков',
+        'rating' => 'Рейтинг игроков',
         'loginRegister' => 'Авторизация',
         'profile' => 'Личный<br/>кабинет'
     ),
     'parameters' => array(
-        'closeIconAltText' => 'Закрыть параметры выбора игры',
-        'header' => 'Параметры',
+        'closeIconAltText' => 'Закрыть',
+        'header' => 'Настройки',
         'playRandomOption' => 'играть в случайном порядке',
         'playSuccOption' => 'играть подряд',
         'unsolvedOnlyOption' => 'только нерешённые мной расклады',
         'requestByIdLabel' => 'Ввести номер расклада ({{0}}-{{1}}):',
-        'commitBtnLabel' => 'Ok',
+        'commitBtnLabel' => 'Ок',
         'cancelBtnLabel' => 'Отмена'
     ),
     'parameters.solitaireVariant' => array(
@@ -145,10 +213,10 @@ $locale = array(
         'themeAmerican' => 'Англо-американская колода'
     ),
     'history' => array(
-        'closeIconAltText' => 'Закрыть историю игр'
+        'closeIconAltText' => 'Закрыть'
     ),
     'gameList' => array(
-        'closeIconAltText' => 'Закрыть список игр',
+        'closeIconAltText' => 'Закрыть',
         'loadingAltText' => 'Загрузка'
     ),
     'gameInfo' => array(
@@ -171,18 +239,17 @@ $locale = array(
         'newMsgCountLabel' => 'Новых сообщений',
         'goToInbox' => 'Посмотреть личные сообщения',
         'doLogout' => 'Выйти из ЛК и играть как гость',
-        'goInvisible' => 'Скрыть моё пребывание на сайте',
         'writeAdmin' => 'Написать админу',
         'changePass' => 'Изменить пароль',
         'email' => 'Электронная почта',
         'share' => 'Рекомендовать игру в соц. сетях'
     ),
     'guestBook' => array(
-        'closeIconAltText' => 'Закрыть гостевую книгу'
+        'closeIconAltText' => 'Закрыть'
     ),
     'footer' => array(
-        'activity' => 'Сейчас на сайте — гостей: {{0}}, зарегистрированных пользователей: {{1}} (из {{2}}).',
-        'visitors' => '<p>Всего уникальных посетителей — вчера: {{0}}, сегодня: {{1}}</p>',
+        'activity' => 'Сейчас на сайте — гостей: {{0}}, зарег. пользователей: {{1}} (из {{2}}).',
+        'visitors' => 'Всего уникальных посетителей — вчера: {{0}}, сегодня: {{1}}',
         'copyright' => 'Программный продукт <a href="http://v6.spb.ru/" target="_blank">Юридического центра &laquo;Восстания-6&raquo;</a>',
     ),
 
@@ -213,7 +280,7 @@ $locale = array(
         'game_disable_invite' => 'Запретить приглашать меня в игру',
         'chat_settings' => 'Настройки чата',
         'chat_disable' => 'Отключить чат',
-        'chat_scroll_to_new' => 'Всегда листать на новое сообщение',
+        'chat_scroll_to_new' => 'Всегда листать на новое сообщение',//DELETE
         'cancel' => 'Отмена'
     ),
 
@@ -224,15 +291,15 @@ $locale = array(
         'date'              => 'Дата',
         'rival'             => 'Противник',
         'time'              => 'Время',
-        'id'                => '№',
+        'id'                => '№ ',
         'rating'            => 'Рейтинг'
     ),
 
     'g_game' => array(
         'lose'              => 'Поражение',
-        'lose_give_up'      => 'Поражение, вы сдались',
-        'lose_time'         => 'Поражение, у вас истекло время',
-        'lose_leave_game'   => 'Поражение, вы покинули игру',
+        'lose_give_up'      => 'Поражение, Вы сдались',
+        'lose_time'         => 'Поражение, у Вас истекло время',
+        'lose_leave_game'   => 'Поражение, Вы покинули игру',
         'win'               => 'Победа',
         'win_give_up'       => 'Победа, соперник сдался',
         'win_time'          => 'Победа, у соперника истекло время',
@@ -256,7 +323,7 @@ $locale = array(
         'list_search' => 'Поиск по списку:',
         'list_expand' => 'Развернуть список игроков',
         'title_score_sum' => 'Суммарный счет',
-        'title_move_limit' => 'Если вы не будете ходить 1 минуту, вам будет засчитано поражение',
+        'title_move_limit' => 'Если Вы не будете ходить 1 минуту, Вам будет засчитано поражение', //DELETE
         'title_spectate_close' => 'Выйти из просмотра',
         'leave_game' => 'Покинуть<br>игру',
         'button_draw' => 'Предложить<br>ничью',
@@ -278,7 +345,7 @@ $locale = array(
         'all_players' => 'все игроки'
     ),
 
-    'g_chat' => array(
+    'g_chat' => array( //DELETE g_chat
         'common_chat' => 'Общий чат',
         'private_chat' => 'Чат с игроком',
         'invite_player' => 'Пригласить в игру',
@@ -315,7 +382,7 @@ $locale = array(
         'rule_2' => 'хамское и некорректное общение с другими участниками',
         'rule_3' => 'многократная публикация бессмысленных, несодержательных или одинаковых сообщений',
         'bans' => 'Баны',
-        'bans_2' => 'выносятся: на 1 день, на 3 дня, на 7 дней,на
+        'bans_2' => 'выносятся: на 1 день, на 3 дня, на 7 дней, на
         месяц или навсегда, в зависимости от степени тяжести нарушения.',
         'ban' => 'Бан',
         'ban_latency' => 'снимается автоматически по истечении срока'

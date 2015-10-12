@@ -1,0 +1,104 @@
+#gbShow {
+    color: white;
+    float: right;
+    padding-right: 7px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.gbUsername {
+    font-weight: bold;
+}
+
+.gbAnswerButton {
+    color: #6363E2;
+    cursor: pointer;
+    float: left;
+    margin-top: 7px;
+}
+
+.gbAnswerButton:hover {
+    text-decoration: underline;
+}
+
+.gbUsernameDateTd {
+    text-align: center !important;
+    padding-top: 17px;
+}
+
+.gbMessageNumber {
+    float: right;
+}
+
+.gbMsgTextTd {
+    border-bottom: 1px solid #CCC !important;
+    word-wrap: break-word;
+    max-width: 400px;
+}
+
+.gbMessageText {
+    padding: 5px 0px 5px 5px;
+    display: inline-block;
+    width: 100%;
+}
+
+.gbAnswerText {
+    padding: 5px 0px 10px 0px;
+    text-align: left;
+    display: inline-block;
+    width: 100%;
+}
+
+.gbAnswerText div{
+    padding-left: 5px;
+}
+
+.gbAnswerMessage {
+    margin-top: 0px;
+    padding-left: 5px;
+    text-align: left;
+}
+
+.gbPostTextArea {
+    margin-top: 15px;
+    width: 100%;
+    padding: 0;
+}
+
+#gbPostBtn {
+    float: right;
+    margin-top: 5px;
+    margin-right: -4px !important;
+}
+#gbPostAnswerBtn {
+    float: right;
+    margin-top: 5px;
+    margin-right: -4px !important;
+}
+
+#gbLoadingIcon {
+    left: 175px !important;
+}
+
+.gbReplyText {
+    margin-top: 10px;
+}
+
+.gbAdminMsg {
+    background-color: #faf4eb;
+}
+
+#gbPostLoadingIcon {
+    display: none;
+    float: left;
+    width: 25px;
+    padding-top: 5px;
+}
+
+.gbNoMessagesAlert {
+    padding-top: 35px;
+    padding-bottom: 55px;
+    color: #777;
+    font-weight: bold;
+    text-align: center;
+}

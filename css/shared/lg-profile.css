@@ -1,0 +1,269 @@
+#profileCloseImg {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    float: right;
+    cursor: pointer;
+}
+
+.profilePhotoFrame {
+    height: 172px;
+    width: 129px;
+    min-width: 129px;
+    padding: 2px 2px 2px 2px;
+    background-color: white;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    table-layout: fixed;
+}
+
+.profilePhotoBorder {
+    border: 1px solid #CCC;
+}
+
+.profilePhoto {
+    max-width: 129px;
+    max-height: 172px;
+}
+
+.profileData {
+    float: left;
+}
+
+.profileShortField {
+    width: 95px;
+}
+
+.profileField {
+    width: 293px;
+}
+
+.profileCP {
+    margin-top: 10px;
+}
+
+#profileLoadingImg {
+    display: none;
+    width: 22px;
+}
+
+.profileLoadingIcon {
+    display: none;
+    margin-left: 35px;
+    float: left;
+    width: 25px;
+}
+
+.profileAbsentField {
+    color: #AAA;
+    font-weight: bold;
+}
+
+.playerProfileTable tr {
+    height: 28px;
+}
+
+.playerProfileTable td {
+    vertical-align: top;
+}
+
+.playerProfile {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.playerProfileLayout {
+    width: 100%;
+}
+
+.playerProfileLayout td {
+    vertical-align: top;
+}
+
+.pdSendMsg {
+    margin-left: 2px !important;
+    /*width: 190px;*/
+    margin-top: 10px !important;;
+    padding: 7px 7px 7px 7px;
+    display: none !important;
+}
+
+.pdSendMsgPanel {
+    margin-top: 10px;
+    width: 100%;
+    border: 1px dashed #CCC;
+}
+
+.pdSendMsgPanelPadding {
+    padding: 10px 10px 10px 10px;
+}
+
+.pdSendMsgBtn {
+    margin-top: 10px;
+    margin-right: 0px !important;
+    float: right !important;
+}
+
+.pdSendMsgResult {
+    font-weight: bold;
+    color: green;
+    padding-left: 10px;
+    padding-top: 4px;
+    float: left;
+}
+
+#profileUnreadMsgAlert {
+    display: none;
+    font-weight: bold;
+    color: #C42E21;
+}
+
+#profileReadMsgBtn {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#profileGoToInbox {
+    font-weight: bold;
+    color: #006699;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#sendToAdmin {
+    font-weight: bold;
+    color: #006699;
+    cursor: pointer;
+    text-decoration: underline;
+    display: block;
+    margin-top: 4px;
+}
+
+#changePassword {
+    font-weight: bold;
+    color: #006699;
+    cursor: pointer;
+    text-decoration: underline;
+    display: block;
+    margin-top: 4px;
+}
+
+#bbUnreadMsgCount {
+    font-weight: bold;
+    color: #C42E21;
+}
+
+.msgText {
+    width: 99.7%;
+    margin-top: 15px;
+    background: #FAFAFA;
+    border: #CCC 1px solid;
+}
+
+.msgPadding {
+    padding: 10px 10px 5px 10px;
+    /*padding-top: 10px;*/
+    /*padding-bottom: 10px;*/
+}
+
+.msgShort {
+    padding-top: 0;
+    padding-bottom: 5px;
+    margin: 0 0 0 0;
+    cursor: pointer;
+    text-decoration: underline;
+    color: #006699;
+}
+
+.ownMessage {
+    color: #444 !important;
+    text-decoration: none;
+}
+
+.profileReplyToBtn, .profileActionBtn {
+    float: right !important;
+    margin-right: 0px !important;
+    margin-top: 10px;
+}
+
+.pmSenderNameTd {
+    padding: 0 0 0 0 !important;
+    margin: 0 0 0 0 !important;
+}
+
+.pmSenderName {
+    padding: 5px 5px 5px 5px !important;
+    margin: 0 0 0 0 !important;
+}
+
+.clear {
+    clear: both;
+}
+
+.pmShowInbox, .pmShowOutbox {
+    display: inline;
+}
+
+.pmShowInbox {
+    padding-left: 10px;
+}
+
+.pmShowOutbox {
+    padding-left: 35px;
+}
+
+.pmCP {
+    float: left;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.activeOption {
+    color: #006699;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#profilePIEditable {
+    display: none;
+}
+
+#pmRecipientList {
+    display: none;
+    margin-top: 10px;
+    padding: 5px 5px 5px 5px;
+}
+
+#pmSendMsgBtn {
+    display: none;
+}
+
+.pmDlgSender {
+    /*color: #2B5979;*/
+    font-weight: bold;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+.pmDlgSendDate {
+    text-align: right;
+    color: #AAA;
+}
+
+.pmDlgLayout {
+    width: 100%;
+}
+
+.pmDlgLayout td {
+    vertical-align: top;
+}
+
+.pmDlgText {
+    padding-bottom: 5px;
+}
+
+.profileH4 {
+    padding-left: 3px;
+    padding-top: 15px;
+}

@@ -1,0 +1,477 @@
+.floatingHint {
+    padding: 5px;
+    border: 1px solid #CCC;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 10000;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    background-color: #FFFFE0;
+    font-size: 8pt;
+}
+
+.noRightBorder {
+    border-right: none !important;
+}
+
+.standartTable td, .standartTable th {
+    vertical-align: top;
+    padding: 5px 3px 0px 3px;
+    border: none;
+    border-bottom: 1px solid #CCC;
+    border-right: 1px solid #CCC;
+    max-width: 130px;
+    overflow: hidden;
+}
+
+.standartTable th {
+    background-color: #EEE;
+    padding: 10px 3px 10px 3px;
+}
+
+.standartTable p {
+    font-size: 8pt;
+    padding: 0 0 5px 0;
+    margin: 0 0 0 0;
+}
+
+.standartTable table td {
+    text-align: center;
+}
+
+/*.standartTable table p {*/
+    /*font-size: 10pt;*/
+    /*padding: 5px 5px 8px 5px;*/
+    /*margin: 0 0 0 0;*/
+/*}*/
+
+.standartTable {
+    font-size: 8pt;
+    border: none;
+    border-left: 1px solid #CCC;
+    border-top: 1px solid #CCC;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+.activeText {
+    cursor: pointer;
+}
+
+table.noBordersTable th {
+    padding: 0 3px 0 3px !important;
+    background-color: white;
+    border: none;
+    font-weight: normal;
+    color: #777;
+}
+
+table.noBordersTable, table.noBordersTable td {
+    border: none !important;
+    text-align: left !important;
+}
+
+table.smartNoBordersTable, table.smartNoBordersTable td {
+    border: none;
+    text-align: left;
+}
+
+.faded {
+    color: #AAA;
+}
+
+.constantWidthTd {
+    min-width: 75px;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    font-weight: normal;
+    font-family: Verdana;
+    font-size: 8pt;
+    border: 1px solid #BBB;
+    padding: 2px 2px 2px 2px;
+    margin-left: 5px;
+    margin-right: 5px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.constantWidthBtn {
+    min-width: 75px;
+    text-align: center;
+    display: block;
+    float: left;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    font-weight: normal;
+    font-family: Verdana;
+    font-size: 8pt;
+    border: 1px solid #AAA;
+    padding: 5px 9px 5px 9px;
+    margin-left: 2px;
+    margin-right: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+}
+
+.constantWidthBtn:hover, .constantWidthTd:hover {
+    background: #E7E7E7;
+}
+
+.closeBottomSubPanelImg {
+    position: absolute;
+    top: 10px;
+    right: 6px;
+    float: right;
+    cursor: pointer;
+}
+
+._hackPaddingLayer {
+    padding: 7px 7px 7px 7px;
+}
+
+.bspAuxBtn {
+    color: #006699;
+    cursor: pointer;
+}
+
+.greenSup {
+    color: green;
+}
+
+.activeText {
+    color: #444444;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.activeText:hover {
+    text-decoration: underline;
+}
+
+.closePanelIcon {
+    float: right;
+    cursor: pointer;
+}
+
+.iconPadding {
+    padding-right: 5px;
+    padding-top: 5px;
+}
+
+.loadingIcon {
+    display: none;
+    position: absolute;
+    float: left;
+    left: 6px;
+    width: 25px;
+}
+
+._hackOverFieldPanel {
+    display: none;
+    background: white;
+    color: #444;
+    font-family: Verdana;
+    font-size: 10pt;
+    z-index: 7500;
+    width: 533px;
+    top: 160px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 8px;
+}
+
+.overFieldInnerPanel {
+    padding: 15px 15px 15px 15px;
+}
+
+.bubblePanel {
+    clear: both;
+    display: none;
+    color: #444;
+    font-family: Verdana;
+    font-size: 12px;
+    box-shadow: 0px 0px 15px;
+}
+
+.bubblePanel h4 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#activityDiv p, #regStats p {
+    color: black;
+    padding-top: 0px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#copyright a, #copyright {
+    color: black;
+}
+
+#copyright a {
+    text-decoration: none;
+}
+
+.transpLink {
+    color: black;
+    text-decoration: none;
+
+    -moz-user-select: none;
+}
+
+#vstats p {
+    margin: 0
+}
+
+.nonSelectable {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+.button {
+    min-width: 75px;
+    text-align: center;
+    display: block;
+    float: left;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    font-weight: normal;
+    font-family: Verdana;
+    font-size: 8pt;
+    border: 1px solid #AAA;
+    padding: 5px 9px 5px 9px;
+    margin-left: 2px;
+    margin-right: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+}
+
+.button:hover {
+    background: #E7E7E7;
+}
+
+.link-alike, .linkAlike {
+    text-decoration: underline;
+    color: #006699;
+    cursor: pointer;
+}
+
+.linkAlikeDisabled {
+    text-decoration: none;
+    color: #006699;
+    cursor: pointer;
+}
+
+.actionText {
+    text-decoration: underline;
+    color: #006699;
+    cursor: pointer;
+}
+
+.rowPlayed {
+    background-color: #FFE0EE;
+}
+
+.rowWon {
+    background-color: #FFFFE0;
+}
+
+.zeroMargins {
+    margin: 0 0 0 0;
+}
+
+.tbSuperActive {
+    background-color: #D0FFCC;
+}
+
+.tbSuperActive:hover {
+    background-color: #B4FFAD !important;
+}
+
+.tbInactive {
+    color: #777;
+    cursor: default;
+}
+
+.tbInactive:hover {
+    background: none !important;
+}
+
+#attemptsPanel {
+    font-family: Verdana;
+    font-size: 8pt;
+    z-index: 7499;
+}
+
+.restoreAttempt {
+    font-size: 12pt;
+    cursor: pointer;
+    padding-left: 2px;
+}
+
+.bigAttempt {
+    font-weight: normal !important;
+    font-size: 16pt !important;
+}
+
+.wonAttempt {
+    color: #FF4444;
+}
+
+.fieldInfoPanel {
+    color: #EEE;
+    font-family: Verdana;
+    font-weight: bold;
+    font-size: 8pt;
+}
+
+.activeSortHeader {
+    font-weight: bold;
+    color: #C42E21 !important;
+}
+
+.actionText2 {
+    text-decoration: underline;
+    /*border-bottom: 1px solid #006699;*/
+    color: #006699;
+    cursor: pointer;
+}
+
+.actionText3 {
+    text-decoration: none;
+    /*border-bottom: 1px solid #777;*/
+    color: #444;
+    cursor: pointer;
+}
+
+.actionText4 {
+    text-decoration: none;
+    color: #444;
+    cursor: pointer;
+}
+
+.disabledText {
+    color: #006699;
+    text-decoration: none;
+    cursor: default;
+}
+
+.boldText {
+    font-weight: bold;
+}
+
+.share42init {
+    margin-top: 10px;
+}
+
+
+
+#logicGameStats {
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    border: 1px solid;
+    border-radius: 4px;
+    background-color: white;
+    width: 200px;
+    font-size: 13px;
+    padding: 2px;
+    cursor: pointer;
+}
+
+#logicGameStats .closeIcon {
+    float: right;
+}
+
+#logicGameStats table {
+    width: 100%;
+    cursor: pointer;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+#logicGameStats table td{
+    border: 1px solid #998484;
+}
+
+#logicGameStats table .logic-table-edit{
+    width: 50%;
+    text-align: center;
+}
+
+body {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+#profilePanel {
+    position: relative;
+    -webkit-user-select: initial;
+    -moz-user-select: text;;
+    user-select: initial;
+}
+
+#gbContents {
+    -webkit-user-select: initial;
+    -moz-user-select: text;
+    user-select: initial;
+}
+
+#v6Chat {
+    -webkit-user-select: initial;
+    -moz-user-select: text;
+    user-select: initial;
+}
+
+.switchLocale {
+    padding: 3px;
+    border: 2px solid #cdcdcd;
+    color: #cdcdcd;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 20px;
+    text-transform: uppercase;
+    position: absolute;
+    right: -48px;
+    top: 15px;
+}
+
+
+.switchLocale:hover{
+    border: 2px solid #F0EFEF;
+    color: #F0EFEF;
+    text-decoration: underline;
+}
+
+.isVk .switchLocale{
+    display: none;
+}
+
+
+.lg-vkgroup{
+    position: absolute;
+    right: -118px;
+    top: -48px;
+    width: 110px;
+    height: 44px;
+    text-align: center;
+    background-color: #587FA6;
+    border-radius: 6px;
+    font-family: Verdana;
+    font-size: 12px;
+    padding-top: 4px;
+}
+
+.lg-workbaner {
+    display: none;
+}

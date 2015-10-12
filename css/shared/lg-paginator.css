@@ -1,0 +1,26 @@
+.paginatorNavigation {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 13pt !important;
+}
+
+.paginatorActiveNavigation {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #006699;
+}
+
+.paginatorInactiveNavigation {
+    cursor: default;
+    text-decoration: none;
+    color: #CCC;
+}
+
+.paginatorStats {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 13pt !important;
+    text-decoration: none;
+    color: #CCC;
+    cursor: default;
+}

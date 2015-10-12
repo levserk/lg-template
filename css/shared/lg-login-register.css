@@ -1,0 +1,66 @@
+.lrRedAlert {
+    color: red;
+}
+
+.lrGreenAlert {
+    color: #007A00;
+}
+
+#usernameAlert {
+    margin: 0 0 0 10px;
+}
+
+#passwdAlert {
+    margin: 0 0 0 10px;
+}
+
+#loginResult {
+    padding: 0px 10px 0px 10px;
+}
+
+#switchToRegister, #switchToLogin {
+    color: #C42E21;
+    font-weight: bold;
+}
+
+#bbLoginRegister {
+    /*color: #C42E21;*/
+    /*font-weight: bold;*/
+}
+
+.lrWelcomeHint {
+    font-size: 8pt;
+    color: #888;
+}
+
+.lrWelcomeBtnText {
+    font-size: 10pt;
+    margin-bottom: 2px;
+}
+
+.lrHeaderHint {
+    font-size: 8pt;
+    color: #888;
+}
+
+.lrCommonHeader {
+    text-align: center;
+    font-size: 12pt;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+.lrRememberCheckBox {
+    margin-left: 0px;
+    margin-right: 5px;
+}
+
+.lrSection {
+    border: 1px solid #EEE;
+    padding: 15px 15px 15px 15px;
+    margin-top: 15px;
+
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
