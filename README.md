@@ -11,7 +11,8 @@
 
 $pageTitle = 'example';
 $gvId = YOUR_GAME_ID; // число
-$sign = 'your sign';
+$loadMain = true // флаг для подключения только основных скриптов и файлов стилей;
+$sign = 'your sign' // строка для генерации подписи, для проверки в ис;
 
 include('../snippets/lg-template-local.inc');
 
