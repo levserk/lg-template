@@ -1,10 +1,11 @@
 <?php
 ini_set ( "display_errors", "1");
-require_once("../sharedAPI/LogicGameSessionManager.php");
-require_once("../sharedAPI/LogicGameLocalization.php");
-require_once("../sharedAPI/LogicGameVkAuth.php");
-require_once("../sharedAPI/LogicGameFbAuth.php");
-require_once("../sharedAPI/LogicGameResourceManager.php");
+require_once($_SERVER['DOCUMENT_ROOT'] ."/sharedAPI/LogicGameSessionManager.php");
+require_once($_SERVER['DOCUMENT_ROOT'] ."/sharedAPI/LogicGameLocalization.php");
+require_once($_SERVER['DOCUMENT_ROOT'] ."/sharedAPI/LogicGameVkAuth.php");
+require_once($_SERVER['DOCUMENT_ROOT'] ."/sharedAPI/LogicGameFbAuth.php");
+require_once($_SERVER['DOCUMENT_ROOT'] ."/sharedAPI/LogicGameMmAuth.php");
+require_once($_SERVER['DOCUMENT_ROOT'] ."/sharedAPI/LogicGameResourceManager.php");
 
 // версия клиентских файлов css и js, для кеша
 $v .= '10';
@@ -37,6 +38,13 @@ if (!$isVk) {
             $refresh = true;
         }
     }
+}
+// moy mir auth
+$isMm = false;
+if (!$isVk && !$isFb){
+        $mmAuth = new LogicGameMmAuth($s, $sm);
+        $mmAuth->tryMmAuth();
+        $isMm = $mmAuth->hasMmAuth();
 }
 
 if (!$s->isGuest()) {

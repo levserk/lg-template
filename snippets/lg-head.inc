@@ -12,7 +12,8 @@
     var _lang = '<?php echo $lang ?>';
     var _gameVariationId = <?php echo $s->getGameVariationId(); ?>;
     var _isVk = <?php echo $isVk?'true':'false'; ?> ;
-    var _isFb = (window.location!=top.location&&!_isVk);
+    var _isMm = <?php echo $isMm?'true':'false'; ?>;
+    var _isFb = (window.location!=top.location && !_isVk && !_isMm);
     var _isIframe = (window.location!=top.location);
     var _FB_ID = '<?php echo $isVk?"":$fbAuth->appId ?>';
     var _isFreshUser = <?php echo $isFreshUser?'true':'false'; ?>;

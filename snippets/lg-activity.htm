@@ -29,33 +29,22 @@
         */
 ?>
 <div id="activityDiv">
-    <?php if ($s->isSuperUser()) echo'<a id="activity" href="/stats?gameVariationId='.$gameStatisticsId.'" class="transpLink" target="_top"><p>'.generateActivityString($s).'</p></a>';
-        else echo '<p>'.generateActivityString($s).'</p>';
+    <?php if ($s->isSuperUser()) echo'<a id="activity" href="/stats?gameVariationId='.$gameStatisticsId.'" class="transpLink" target="_top">'.generateActivityString($s).'</a>';
+        else echo ''.generateActivityString($s).'';
     ?>
 </div>
 <div id="vstats">
-    <p><?php
-
-    echo $i18n->format("footer", "visitors", $visitorStats['yesterday'], $visitorStats['today']);
-
+    <p>
+        <?php
+        echo $i18n->format("footer", "visitors", $visitorStats['yesterday'], $visitorStats['today']);
         ?>
     </p>
 </div>
 <div id="copyright">&copy;
     <?=$i18n->get("footer", "copyright")?>
-
-    <!--<script type="text/javascript">&lt;!&ndash;-->
-    <!--document.write("<img src='//counter.yadro.ru/hit?t39.5;r" +-->
-            <!--escape(document.referrer) + ((typeof(screen) == "undefined") ? "" :-->
-            <!--";s" + screen.width + "*" + screen.height + "*" + (screen.colorDepth ?-->
-                    <!--screen.colorDepth : screen.pixelDepth)) + ";u" + escape(document.URL) +-->
-            <!--";" + Math.random() +-->
-            <!--"' " +-->
-            <!--"border='0' width='1' height='1'>")-->
-    <!--//&ndash;&gt;</script>-->
 </div>
 
 <?php
-    require_once "../counter/ym_counter.php";
-    require_once("../stats/save_visit.php");
+    require_once $_SERVER['DOCUMENT_ROOT'] ."/counter/ym_counter.php";
+    require_once $_SERVER['DOCUMENT_ROOT'] ."/stats/save_visit.php";
 ?>

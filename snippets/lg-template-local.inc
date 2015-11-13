@@ -23,8 +23,8 @@ $isFb = false;
 $refresh = false;
 $displayLogged = " style='display: none;'";
 $displayNotLogged = "";
-require("../sharedAPI/LogicGameI18n.php");
-require("../sharedAPI/lang/Lang.$lang.php");
+require($_SERVER['DOCUMENT_ROOT'] ."/sharedAPI/LogicGameI18n.php");
+require($_SERVER['DOCUMENT_ROOT'] ."/sharedAPI/lang/Lang.$lang.php");
 
 $i18n = new LogicGameI18n($locale, $gvId);
 ?>
@@ -91,7 +91,7 @@ $i18n = new LogicGameI18n($locale, $gvId);
             </div>
             <div id="middle-block" >
                 <?php
-                    include '../snippets/lg-login-register.htm';
+                    include $_SERVER['DOCUMENT_ROOT'] .'/snippets/lg-login-register.htm';
                 ?>
                 <div id="game-field">
                     <?php
@@ -109,8 +109,8 @@ $i18n = new LogicGameI18n($locale, $gvId);
     </div>
     <div id="bottom-block" >
         <?php
-            include '../snippets/lg-profile.htm';
-            include '../snippets/lg-guestbook.htm';
+            include $_SERVER['DOCUMENT_ROOT'] .'/snippets/lg-profile.htm';
+            include $_SERVER['DOCUMENT_ROOT'] .'/snippets/lg-guestbook.htm';
             @include 'snippets/bottom.inc'
         ?>
         <div id="info-block">
