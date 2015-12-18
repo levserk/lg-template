@@ -141,6 +141,9 @@ contexts['gameInfo']['gameRatingLabel'] = "рейтинг расклада";
 contexts['gameInfo']['wonCountLabel'] = "выиграло";
 contexts['gameInfo']['playedCountLabel'] = "играло";
 contexts['gameInfo']['commentLabel'] = "Комментарий";
+contexts['gameInfo']['easy'] = "легк.";
+contexts['gameInfo']['medium'] = "сред.";
+contexts['gameInfo']['hard'] = "слож.";
 contexts['gameInfo']['onlyForSignedUsersAlert'] = "ТОЛЬКО ДЛЯ ЗАРЕГИСТРИРОВАННЫХ ПОЛЬЗОВАТЕЛЕЙ";
 
 contexts['rating'] = [];
@@ -273,10 +276,14 @@ contexts['ui']['logoutConfirmation'] = "Вы действительно хоти
 contexts['ui']['gameIsLoadingNotice'] = "Загрузка игры...";
 contexts['ui']['isComputerSolutionHint'] = "решение, предложенное компьютером";
 contexts['ui']['specialMoveActionHint'] = "Выберите карту или нажмите ESC для отмены.";
+contexts['ui']['specialMoveActionHintPuzzle'] = "Выберите клетку или нажмите ESC для отмены.";
 contexts['ui']['noSolutionAvailableNotice'] = "Для этого расклада нет предсохранённого решения.";//DELETE
 contexts['ui']['solutionLoadingFailureNotice'] = "При загрузке решения возникла ошибка.";
 
-contexts['beacon'] = [];
+contexts['ui']['showLevelStarts'] = "Показать начало уровня";
+contexts['ui']['comeBackToGame'] = "Вернутся к игре";
+
+    contexts['beacon'] = [];
 contexts['beacon']['activityString'] =
     "Сейчас на сайте — гостей: {{0}}, зарег. пользователей: {{1}} (из {{2}}).";
 contexts['beacon']['noConnectionNotice'] = "Невозможно установить соединение с сервером. " +
@@ -305,9 +312,15 @@ contexts['ui']['game_lines'] = "Линии"
 contexts['ui']['game_tetris'] = "Тетрис"
 contexts['ui']['game_match3'] = "Три в ряд"
 
+
+contexts['ui']['match3easy'] = "Легкий<br>(с диагоналями)"
+contexts['ui']['match3normal'] = "Обычный"
+contexts['ui']['match3defaulttheme'] = "По умолчанию"
+contexts['ui']['match3altertheme'] = "Альтернативная"
 contexts['ui']['yourrecord'] = "Ваш рекорд"
-contexts['ui']['showhelp'] = "Показать подсказку"
-contexts['ui']['hidehelp'] = "Скрыть подсказку"
+contexts['ui']['hint'] = "Подсказка"
+contexts['ui']['showhelp'] = "Показать подсказку"//DELETE
+contexts['ui']['hidehelp'] = "Скрыть подсказку"//DELETE
 contexts['ui']['maxpointspergame'] = "Макс. кол-во очков за игру"
 contexts['ui']['timeinbestgame'] = "Вр. в лучш. игре / ходов назад"
 contexts['ui']['averagepoints'] = "Сред. кол-во очков"
@@ -317,8 +330,7 @@ contexts['ui']['gametime'] = "Время в игре"
 contexts['ui']['gametime2'] = "Время"
 
 
-contexts['ui']['parameters'] = "Параметры"
-
+contexts['ui']['parameters'] = "Настройки"
 contexts['ui']['movinganimation'] = "Выбор анимации перехода"
 contexts['ui']['showpath'] = "Показывать путь"
 contexts['ui']['showpath2'] = "Показывать место приземления фигуры"
@@ -328,9 +340,9 @@ contexts['ui']['selectedball'] = "Выбранный шар"
 contexts['ui']['highlight'] = "Выделить"
 contexts['ui']['showanimation'] = "Показать анимацию"
 contexts['ui']['gametype'] = "Тип игры (начнется новая игра)"
-contexts['ui']['defaulttype'] = "Обычная (+3 шара)"
-contexts['ui']['type2'] = "+2 шара (без записи в рейтинг)"
-contexts['ui']['type4'] = "+4 шара (без записи в рейтинг)"
+contexts['ui']['defaulttype'] = "Обычный<br>(3 шара)"
+contexts['ui']['type2'] = "Легкий<br>(2 шара)"
+contexts['ui']['type4'] = "Сложный<br>(4 шара)"
 contexts['ui']['showbg'] = "Поле в клетку"
 contexts['ui']['appearance'] = "Внешний вид"
 contexts['ui']['solid_shape'] = "Обьемные фигуры"
@@ -398,6 +410,22 @@ contexts['g_game']['status_win'] = "Поздравляем! Вы выиграл�
 contexts['g_game']['no_games'] = "Сохранения отсутствуют";
 contexts['g_game']['not_found_with_opp'] = "Не найдено игр с";
 contexts['g_game']['computer'] = "Компьютер";
+//Sudoku hints
+contexts['g_game']['nakedSingleHint'] = "Одиночка. Поставте цифру";
+contexts['g_game']['hiddenSingleHint'] = "Скрытая одиночка. Поставте цифру";
+contexts['g_game']['nakedPairHint'] = "Пара. Удалите правой кнопкой лишние варианты";
+contexts['g_game']['nakedTripleHint'] = "Тройка. Удалите правой кнопкой лишние варианты";
+contexts['g_game']['nakedQuadHint'] = "Четверка. Удалите правой кнопкой лишние варианты";
+contexts['g_game']['hiddenPairHint'] = "Скрытая пара. Удалите правой кнопкой лишние варианты";
+contexts['g_game']['hiddenTripleHint'] = "Скрытая тройка. Удалите правой кнопкой лишние варианты";
+contexts['g_game']['pointingPairHint'] = "Указывающая пара. Удалите правой кнопкой лишние варианты";
+contexts['g_game']['boxReductionHint'] = "Сокращение квадрата. Удалите правой кнопкой лишние варианты";
+contexts['g_game']['useForkHint'] = 'Воспользуйтесь методом "Развилка"';
+contexts['g_game']['marksLimitHint'] = "Не больше трех пометок. Удалите предыдущую.";
+contexts['g_game']['numbers'] = "Цифр: ";
+// sokoban
+contexts['g_game']['filterLabel'] = "фильтр по сериям";
+contexts['g_game']['noFilterLabel'] = "все серии";
 
 contexts['g_message'] = [];
 contexts['g_message']['wait_30_sec'] = "Возможность предложить ничью появится в течение 30 секунд";

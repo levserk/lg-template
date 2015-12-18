@@ -1,4 +1,4 @@
-/*! 2015-10-12 */
+/*! 2015-12-03 */
 var KEY_ESC = 27;
 
 var KEY_A = 65;
@@ -1165,7 +1165,7 @@ var ErrorReporter = (function(){
                 try {
                     var cs = window.cs || (window.controller ? window.controller.getClientServer() : null);
                     if ((cs.isSuperUser())) {
-                        init();
+                        //init();
 
                     }
                 } catch (e) {
@@ -1255,7 +1255,15 @@ $(document).ready(function () {
         $('.lg-vkgroup').hide();
     }
 
-    if (window._isIframe) $('a[href^="/"]').attr('target','_blank');
+    if (window._isIframe) {
+        $('a[href^="/"]').attr('target','_blank');
+    }
+
+    if (window._isFb){
+        //hide banner
+        $('.lg-banner').hide();
+        $('#lg-activity-container').show();
+    }
 });
 function SafeSharedUI() {
     var that = this;
@@ -2018,15 +2026,15 @@ function SharedController() {
             })
 
         $("#tbNewGame").click(function () {
-            if (that.isGameActive() && (that.isGameValueless() || confirm(that.i18n.get("startNewGamePrompt")))) {
+            //if (that.isGameActive() && (that.isGameValueless() || confirm(that.i18n.get("startNewGamePrompt")))) {
                 that.startNextGame();
-            }
+            //}
         });
 
         $("#tbReplay").click(function () {
-            if (that.isGameActive() && (that.isGameValueless() || confirm(that.i18n.get("replayGamePrompt")))) {
+            //if (that.isGameActive() && (that.isGameValueless() || confirm(that.i18n.get("replayGamePrompt")))) {
                 that.replay();
-            }
+            //}
         });
     }
 
@@ -2291,9 +2299,9 @@ function SharedClientServer() {
                 userId == 448039 ||
                 userId == 80911 ||
                 userId == 460981 ||
-                userId == 708734 ||
                 userId == 3172467 ||
                 userId == 7123667 ||
+                userId == 12050588 ||
                 userId == 6720145
             );
     }
@@ -2326,6 +2334,7 @@ function SharedClientServer() {
         }
 
         $.post(gtw, params, function (data) {
+
             that.setRecentData(data);
             var response = parseJSON(data);
             if (response != null && response.status == "ok") {
@@ -3810,7 +3819,8 @@ function HistoryRenderer(_gc, _ui, _options) {
                 return function () {
                     gc.requestGame(gh.gameId, null, function () {
 //                        $("html, body").animate({ scrollTop : 0 }, "fast");
-                        ui.showGameInfo(gh.gameId, false);
+                        //ui.showGameInfo(gh.gameId, false);
+                        ui.hidePanel('historyPanel')
                     });
                 }
             }(gh));
@@ -6354,7 +6364,8 @@ function RatingsRenderer(_gc, _ui, _options) {
 //                        alert(_gameId);
                         if (data.canPlayGames) {
                             gc.requestGame(_gameId, null, function () {
-                                ui.showGameInfo(_gameId, false);
+                                //ui.showGameInfo(_gameId, false);
+                                ui.hidePanel()
                             });
                         } else {
                             alert(i18n.get("wrongGameVariationAlert"));
@@ -6914,7 +6925,8 @@ function GameListRenderer(_gc, _ui, _options) {
                     gc.requestGame(_gameId, null, function () {
                         glRecentRequestedGame = _gameId;
 //                        $("html, body").animate({ scrollTop : 0 }, "fast");
-                        ui.showGameInfo(_gameId, false);
+                        //ui.showGameInfo(_gameId, false);
+                        ui.hidePanel('gameListPanel');
                     })
                 };
             }(_gameId));

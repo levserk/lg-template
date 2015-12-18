@@ -1,6 +1,6 @@
 ﻿<?php
 
-require_once($_SERVER['DOCUMENT_ROOT'] . "/sharedAPI/LogicGameConfig.php");
+require_once($dir . "/sharedAPI/LogicGameConfig.php");
 
 $locale = array(
     'locale' => array(

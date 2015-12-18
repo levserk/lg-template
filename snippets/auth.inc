@@ -1,5 +1,5 @@
 <?php
-ini_set ( "display_errors", "1");
+//ini_set ( "display_errors", "1");
 require_once($_SERVER['DOCUMENT_ROOT'] ."/sharedAPI/LogicGameSessionManager.php");
 require_once($_SERVER['DOCUMENT_ROOT'] ."/sharedAPI/LogicGameLocalization.php");
 require_once($_SERVER['DOCUMENT_ROOT'] ."/sharedAPI/LogicGameVkAuth.php");

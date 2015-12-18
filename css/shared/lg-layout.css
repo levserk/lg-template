@@ -4,6 +4,10 @@ html {
     overflow-x:hidden;
 }
 
+@media (max-width: 900px) {
+    html {overflow-x:auto }
+}
+
 #main-wrapper{
     width: 1000px;
     margin: 0 auto;

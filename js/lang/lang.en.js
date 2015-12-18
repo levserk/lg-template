@@ -99,7 +99,7 @@ contexts['gameList']['gameIdLabel'] = 'Number';
 contexts['gameList']['gameRatingLabel'] = 'Hand rating';
 contexts['gameList']['gameRatingDescription'] = 'average solution time';
 contexts['gameList']['winTimeAndRankLabel'] = 'Solution time /<br />your rank';
-contexts['gameList']['winTimeAndRankDescription'] = 'time spent on solution';
+contexts['gameList']['winTimeAndRankDescription'] = '';
 contexts['gameList']['solvedLabel'] = 'Won';
 contexts['gameList']['playedLabel'] = 'Played';
 contexts['gameList']['noRatingAltText'] = 'no rating';
@@ -114,8 +114,8 @@ contexts['history']['gameIdLabel'] = [];
 contexts['history']['gameIdLabel']['hand'] = 'Hand';
 contexts['history']['gameIdLabel']['level'] = 'Level';
 contexts['history']['commentLabel'] = 'Comment';
-contexts['history']['wtLabel'] = 'Solution time / your rank for this hand';
-contexts['history']['baLabel'] = 'Best attempt time / your rank for this hand';
+contexts['history']['wtLabel'] = 'Solution time / your rank';
+contexts['history']['baLabel'] = 'Best attempt time / your rank';
 contexts['history']['dateDaysLabel'] = 'Date/days';
 contexts['history']['dateLabel'] = 'Date';
 contexts['history']['noGamesByFilterAlert'] = "No games available for this filter setting";
@@ -136,11 +136,14 @@ contexts['gameInfo']['gameIdLabel']['level'] = "Level: ";
 contexts['gameInfo']['byWinTimeLabel'] = "By solution time";
 contexts['gameInfo']['byBestAttemptTimeLabel'] = "By best attempt";
 contexts['gameInfo']['unsolvedListLabel'] = "Who not solved this hand";
-contexts['gameInfo']['playerResultsHeader'] = "Player's results";
+contexts['gameInfo']['playerResultsHeader'] = "Results of players";
 contexts['gameInfo']['gameRatingLabel'] = "hand rating";
 contexts['gameInfo']['wonCountLabel'] = "won";
 contexts['gameInfo']['playedCountLabel'] = "played";
 contexts['gameInfo']['commentLabel'] = "Comment";
+contexts['gameInfo']['easy'] = "easy";
+contexts['gameInfo']['medium'] = "medium";
+contexts['gameInfo']['hard'] = "hard";
 contexts['gameInfo']['onlyForSignedUsersAlert'] = "ONLY FOR REGISTERED USERS";
 
 contexts['rating'] = [];
@@ -148,7 +151,7 @@ contexts['rating']['placeLabel'] = "Rank";
 contexts['rating']['usernameLabel'] = "Username";
 contexts['rating']['searchByUsernameLabel'] = "Search";
 contexts['rating']['regDateLabel'] = "Date";
-contexts['rating']['solvedCountLabel'] = "Solved count";
+contexts['rating']['solvedCountLabel'] = "Solved";
 contexts['rating']['playedCountLabel'] = "Total";
 contexts['rating']['bestWinTimeCountLabel'] = "1st places<br />by<br />time";
 contexts['rating']['bestWinTimeCountShortLabel'] = "1st places";
@@ -170,10 +173,10 @@ contexts['rating']['placeSuffix'] = "place";
 contexts['rating']['noviceMark'] = "novice";
 contexts['rating']['averageWinTimeLabel'] = "Average solution time";
 contexts['rating']['totalGameTimeLabel'] = "Game time";
-contexts['rating']['playerResultHeader'] = "Result of player {{0}}"; // 0 - player name
+contexts['rating']['playerResultHeader'] = "Result of {{0}}"; // 0 - player name
 contexts['rating']['userResultHeader'] = "Your result";
 contexts['rating']['selfHistoryHint'] = "All hands you have played are available in the <span class='actionText2' id='pdShowHistory'>History</span>.";
-contexts['rating']['wrongGameVariationAlert'] = "This game is from a another solitaire version and cannot be loaded.";
+contexts['rating']['wrongGameVariationAlert'] = "This game is from another solitaire version and cannot be loaded.";
 contexts['shared']['bestAttempt'] = "Best result: ";
 contexts['shared']['YourAttempt'] = "Your result: ";
 contexts['shared']['allResults'] = "Show all results";
@@ -250,7 +253,7 @@ contexts['loginRegister']['passwdRequiredNotice'] = "You have not specified a pa
 contexts['controller'] = [];
 contexts['controller']['startPrevGamePrompt'] = "Return to previous game?";
 contexts['controller']['startNewGamePrompt'] = "Start new game?";
-contexts['controller']['replayGamePrompt'] = "Replay game?";
+contexts['controller']['replayGamePrompt'] = "Do you want to restart this game?";
 contexts['controller']['noGamesBySpecifiedParametersNotice'] = "No games with given parameters have been found.";
 contexts['controller']['rejectDealFromStock'] = "A new row of cards may be dealt only if there's no free columns";
 
@@ -258,10 +261,9 @@ contexts['ui'] = [];
 contexts['ui']['loadingNotice'] = "Loading";
 contexts['ui']['ascOrderHint'] = "asc. order";
 contexts['ui']['descOrderHint'] = "desc. order";
-contexts['ui']['ratingLabel'] = "rate";
+contexts['ui']['ratingLabel'] = "rating";
 contexts['ui']['ratingFullLabel'] = "rating";
 contexts['ui']['historyLengthLabel'] = "moves";
-contexts['ui']['solutionLengthLabel'] = "length";
 contexts['ui']['attemptTimeLabel'] = "time";//DELETE
 contexts['ui']['gameTimeLabel'] = "tot.time";
 contexts['ui']['gameTimeFullLabel'] = "total time";
@@ -272,8 +274,12 @@ contexts['ui']['logoutConfirmation'] = "Are you sure you want to sign out?";
 contexts['ui']['gameIsLoadingNotice'] = "Game loading...";
 contexts['ui']['isComputerSolutionHint'] = "solution suggested by computer";
 contexts['ui']['specialMoveActionHint'] = "Select card or press ESC to cancel.";
+contexts['ui']['specialMoveActionHintPuzzle'] = "Select cell or press ESC to cancel.";
 contexts['ui']['noSolutionAvailableNotice'] = "No pre-saved solution available for this hand.";
 contexts['ui']['solutionLoadingFailureNotice'] = "An error occurred during solution load.";
+
+contexts['ui']['showLevelStarts'] = "show level starts";
+contexts['ui']['comeBackToGame'] = "come back to game";
 
 contexts['beacon'] = [];
 contexts['beacon']['activityString'] =
@@ -291,8 +297,8 @@ contexts['card']['specialMoveCancel'] = "Cancel special move";
 
 // arkanoid, lines
 
-contexts['ui']['points'] = "points"
-contexts['ui']['points2'] = "Points"
+contexts['ui']['points'] = "score"
+contexts['ui']['points2'] = "Score"
 contexts['ui']['pause'] = "Pause"
 contexts['ui']['playothergames'] =       "Play other games"
 contexts['ui']['questionsandcomments'] = "Guestbook"
@@ -303,9 +309,15 @@ contexts['ui']['game_lines'] = "Lines"
 contexts['ui']['game_tetris'] = "Tetris"
 contexts['ui']['game_match3'] = "Match 3"
 
-contexts['ui']['yourrecord'] = "Your highest score"
-contexts['ui']['showhelp'] = "Show help"
-contexts['ui']['hidehelp'] = "Hide help"
+contexts['ui']['match3easy'] = "Easy<br>(with diagonals)"
+contexts['ui']['match3normal'] = "Normal"
+contexts['ui']['match3defaulttheme'] = "Default"
+contexts['ui']['match3altertheme'] = "Alternative"
+
+contexts['ui']['yourrecord'] = "your best score"
+contexts['ui']['hint'] = "Hint"
+contexts['ui']['showhelp'] = "Show help"//DELETE
+contexts['ui']['hidehelp'] = "Hide help"//DELETE
 contexts['ui']['maxpointspergame'] = "Max. points per game"
 contexts['ui']['timeinbestgame'] = "Time in best game/moves back"
 contexts['ui']['averagepoints'] = "Average points"
@@ -314,7 +326,7 @@ contexts['ui']['totalmoves'] = "Total moves"
 contexts['ui']['gametime'] = "Game time"
 contexts['ui']['gametime2'] = "Time"
 
-contexts['ui']['parameters'] = "Parameters"
+contexts['ui']['parameters'] = "Options"
 
 contexts['ui']['movinganimation'] = "Select moving animation"
 contexts['ui']['showpath'] = "Show where figures lands"
@@ -325,9 +337,9 @@ contexts['ui']['selectedball'] = "Selected ball"
 contexts['ui']['highlight'] = "Highlight"
 contexts['ui']['showanimation'] = "Show animation"
 contexts['ui']['gametype'] = "Game type (a new game will start)"
-contexts['ui']['defaulttype'] = "Default (+3 balls)"
-contexts['ui']['type2'] = "+2 balls (no rating)"
-contexts['ui']['type4'] = "+4 balls (no rating)"
+contexts['ui']['defaulttype'] = "Normal<br>(3 balls)"
+contexts['ui']['type2'] = "Easy<br>(2 balls)"
+contexts['ui']['type4'] = "Hard<br>(4 balls)"
 contexts['ui']['showbg'] = "Show background"
 contexts['ui']['appearance'] = "Color theme"
 contexts['ui']['solid_shape'] = "Solid shape"
@@ -353,7 +365,7 @@ contexts['ui']['background'] = "Background"
 contexts['ui']['gamearea'] = "Playing board"
 contexts['ui']['textcolor'] = "Text color"
 
-contexts['ui']['label_best'] = "Best"
+contexts['ui']['label_best'] = "total best score"
 
 /* Gomoku */
 contexts['g_button'] = [];
@@ -392,7 +404,22 @@ contexts['g_game']['status_win'] = "Congratulations! You won";
 contexts['g_game']['no_games'] = "No games saved";
 contexts['g_game']['not_found_with_opp'] = "Not found: games with";
 contexts['g_game']['computer'] = "Computer";
-
+ //Sudoku hints
+contexts['g_game']['nakedSingleHint'] = "Naked single. Set digit.";
+contexts['g_game']['hiddenSingleHint'] = "Hidden single. Set digit.";
+contexts['g_game']['nakedPairHint'] = "Naked pair. Right click to delete extra variants.";
+contexts['g_game']['nakedTripleHint'] = "Naked triple. Right click to delete extra variants.";
+contexts['g_game']['nakedQuadHint'] = "Naked quad. Right click to delete extra variants.";
+contexts['g_game']['hiddenPairHint'] = "Hidden pair. Right click to delete extra variants.";
+contexts['g_game']['hiddenTripleHint'] = "Hidden triple. Right click to delete extra variants.";
+contexts['g_game']['pointingPairHint'] = "Pointing pair. Right click to delete extra variants.";
+contexts['g_game']['boxReductionHint'] = "Box reduction. Right click to delete extra variants.";
+contexts['g_game']['useForkHint'] = 'Use "Fork" method.';
+contexts['g_game']['marksLimitHint'] = "Only three marks are available. Remove the previous one.";
+contexts['g_game']['numbers'] = "Digits: ";
+// sokoban
+contexts['g_game']['filterLabel'] = "filter by collection";
+contexts['g_game']['noFilterLabel'] = "all collections";
 
 contexts['g_message'] = [];
 contexts['g_message']['wait_30_sec'] = "You will be able to offer a draw within 30 seconds";

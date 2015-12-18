@@ -309,7 +309,6 @@ table.smartNoBordersTable, table.smartNoBordersTable td {
 #attemptsPanel {
     font-family: Verdana;
     font-size: 8pt;
-    z-index: 7499;
 }
 
 .restoreAttempt {
@@ -442,7 +441,7 @@ body {
     font-size: 20px;
     text-transform: uppercase;
     position: absolute;
-    right: -48px;
+    right: -118px;
     top: 15px;
 }
 

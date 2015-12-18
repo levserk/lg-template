@@ -1,5 +1,4 @@
 <?php
-
 define("KOSYNKA_ID", 1);
 define("KOSYNKA_3C_ID", 1);
 define("FREECELL_ID", 2);
@@ -35,3 +34,9 @@ define("MINESWEEPER_ID",31);
 define("NIM_ID",32);
 define("PACMAN_ID", 33);
 define("MAT_ID", 34);
+define("THIPEAKS_ID", 35);
+define("EGEMATH_ID", 36);
+define("SCORPION_ID", 37);
+define("FILLWORD_ID", 38);
+define("PDD_ID", 39);
+define("HANOI_ID", 40);

@@ -34,15 +34,21 @@ if(!$isVk) {
 }
 if (isset($loadMain) && $loadMain){
     echo "<script type='text/javascript' src='/js/build/public-main.min.js?v=$v'></script> \n\r";
-    echo "<script type='text/javascript' src='/js/build/shared-main.js?v=$v'></script> \n\r";
+    echo "<script type='text/javascript' src='/js/build/shared-main.min.js?v=$v'></script> \n\r";
 } else {
     echo "<script type='text/javascript' src='/js/build/public.min.js?v=$v'></script> \n\r";
-    echo "<script type='text/javascript' src='/js/build/shared-all.js?v=$v'></script> \n\r";
+    echo "<script type='text/javascript' src='/js/build/shared.min.js?v=$v'></script> \n\r";
 }
 
 echo "<script type='text/javascript' src='/js/lang/lang.".$lang.".js?v=$v'></script> \n\r";
 
-echo '<script src="/js/shared/lg-facebook.js" type="text/javascript"></script>';
+echo "<script src='/js/shared/lg-facebook.js?v=$v'' type='text/javascript'></script>";
+
+// test socket connection
+//echo "<script src='/js/shared/test-socket.js?v=$v'' type='text/javascript'></script>";
+
+if ($s->isSuperUser()) echo "<script src='/js/shared/lg-background.js?v=$v'' type='text/javascript'></script>";
+
 
 echo "<link media='screen' href='/css/build/shared.css?v=$v' rel='stylesheet' type='text/css'>\n\r";
 echo "<link media='screen' href='/css/shared/lg-layout.css?v=$v' rel='stylesheet' type='text/css'>\n\r";

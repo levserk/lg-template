@@ -1,10 +1,17 @@
+<!--google translator-->
+<div id="google_translate_element"></div><script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+    }
+</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<!---->
 <?php
     require_once($_SERVER['DOCUMENT_ROOT'] . "/sharedAPI/LogicGameStatisticsAPI.php");
 
     $visitorStats = $s->getVisitorStats();
     $g = LogicGameStatistics::getGameByGVID($s->getGameVariationId());
     $gameStatisticsId = $g['gameStatisticsId'];
-        /*
+    /*
     if (isset($isVk) && $isVk){
         include('lg-vkgroup.htm');
     } else {
@@ -25,24 +32,28 @@
             include('lg-vkgroup.htm');
             echo '</div>';
         }
-    }
-        */
+    }*/
+    $showBanner = false;
+    include($_SERVER['DOCUMENT_ROOT'].'/snippets/lg-baner.inc');
 ?>
-<div id="activityDiv">
-    <?php if ($s->isSuperUser()) echo'<a id="activity" href="/stats?gameVariationId='.$gameStatisticsId.'" class="transpLink" target="_top">'.generateActivityString($s).'</a>';
+<div id="lg-activity-container" <?php echo ($showBanner?'style="display:none"':'')?>>
+    <div id="activityDiv">
+        <?php if ($s->isSuperUser()) echo'<a id="activity" href="/stats?gameVariationId='.$gameStatisticsId.'" class="transpLink" target="_top">'.generateActivityString($s).'</a>';
         else echo ''.generateActivityString($s).'';
-    ?>
-</div>
-<div id="vstats">
-    <p>
-        <?php
-        echo $i18n->format("footer", "visitors", $visitorStats['yesterday'], $visitorStats['today']);
         ?>
-    </p>
+    </div>
+    <div id="vstats">
+        <p>
+            <?php
+        echo $i18n->format("footer", "visitors", $visitorStats['yesterday'], $visitorStats['today']);
+            ?>
+        </p>
+    </div>
+    <div id="copyright">&copy;
+        <?=$i18n->get("footer", "copyright")?>
+    </div>
 </div>
-<div id="copyright">&copy;
-    <?=$i18n->get("footer", "copyright")?>
-</div>
+
 
 <?php
     require_once $_SERVER['DOCUMENT_ROOT'] ."/counter/ym_counter.php";

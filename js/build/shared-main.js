@@ -1,4 +1,4 @@
-/*! 2015-10-12 */
+/*! 2015-12-03 */
 var KEY_ESC = 27;
 
 var KEY_A = 65;
@@ -913,7 +913,7 @@ var ErrorReporter = (function(){
                 try {
                     var cs = window.cs || (window.controller ? window.controller.getClientServer() : null);
                     if ((cs.isSuperUser())) {
-                        init();
+                        //init();
 
                     }
                 } catch (e) {
@@ -1003,7 +1003,12 @@ $(document).ready(function () {
         $('.lg-vkgroup').hide();
     }
 
-    if (window._isIframe) $('a[href^="/"]').attr('target','_blank');
+    if (window._isFb) {
+        $('a[href^="/"]').attr('target','_blank');
+        //hide banner
+        $('.lg-banner').hide();
+        $('#lg-activity-container').show();
+    }
 });
 function SafeSharedUI() {
     var that = this;
@@ -1727,15 +1732,15 @@ function SharedController() {
             })
 
         $("#tbNewGame").click(function () {
-            if (that.isGameActive() && (that.isGameValueless() || confirm(that.i18n.get("startNewGamePrompt")))) {
+            //if (that.isGameActive() && (that.isGameValueless() || confirm(that.i18n.get("startNewGamePrompt")))) {
                 that.startNextGame();
-            }
+            //}
         });
 
         $("#tbReplay").click(function () {
-            if (that.isGameActive() && (that.isGameValueless() || confirm(that.i18n.get("replayGamePrompt")))) {
+            //if (that.isGameActive() && (that.isGameValueless() || confirm(that.i18n.get("replayGamePrompt")))) {
                 that.replay();
-            }
+            //}
         });
     }
 
@@ -2000,9 +2005,9 @@ function SharedClientServer() {
                 userId == 448039 ||
                 userId == 80911 ||
                 userId == 460981 ||
-                userId == 708734 ||
                 userId == 3172467 ||
                 userId == 7123667 ||
+                userId == 12050588 ||
                 userId == 6720145
             );
     }
@@ -2035,6 +2040,7 @@ function SharedClientServer() {
         }
 
         $.post(gtw, params, function (data) {
+
             that.setRecentData(data);
             var response = parseJSON(data);
             if (response != null && response.status == "ok") {

@@ -23,8 +23,10 @@ $isFb = false;
 $refresh = false;
 $displayLogged = " style='display: none;'";
 $displayNotLogged = "";
-require($_SERVER['DOCUMENT_ROOT'] ."/sharedAPI/LogicGameI18n.php");
-require($_SERVER['DOCUMENT_ROOT'] ."/sharedAPI/lang/Lang.$lang.php");
+$dir = substr(str_replace('\\', '/', __DIR__), 0, strrpos(str_replace('\\', '/', __DIR__), '/'));
+
+require($dir ."/sharedAPI/LogicGameI18n.php");
+require($dir ."/sharedAPI/lang/Lang.$lang.php");
 
 $i18n = new LogicGameI18n($locale, $gvId);
 ?>
@@ -53,16 +55,16 @@ $i18n = new LogicGameI18n($locale, $gvId);
         <?php
 
         if (isset($loadMain) && $loadMain){
-            echo "<script type='text/javascript' src='/js/build/public-main.min.js?v=$v'></script> \n\r";
-            echo "<script type='text/javascript' src='/js/build/shared-main.js?v=$v'></script> \n\r";
+            echo "<script type='text/javascript' src='//logic-games.spb.ru/js/build/public-main.min.js?v=$v'></script> \n\r";
+            echo "<script type='text/javascript' src='//logic-games.spb.ru/js/build/shared-main.js?v=$v'></script> \n\r";
         } else {
-            echo "<script type='text/javascript' src='/js/build/public.min.js?v=$v'></script> \n\r";
-            echo "<script type='text/javascript' src='/js/build/shared-all.js?v=$v'></script> \n\r";
+            echo "<script type='text/javascript' src='//logic-games.spb.ru/js/build/public.min.js?v=$v'></script> \n\r";
+            echo "<script type='text/javascript' src='//logic-games.spb.ru/js/build/shared-all.js?v=$v'></script> \n\r";
         }
 
-        echo "<script type='text/javascript' src='/js/lang/lang.".$lang.".js?v=$v'></script> \n\r";
-        echo "<link media='screen' href='/css/build/shared.css?v=$v' rel='stylesheet' type='text/css'>\n\r";
-        echo "<link media='screen' href='/css/shared/lg-layout.css?v=$v' rel='stylesheet' type='text/css'>\n\r";
+        echo "<script type='text/javascript' src='//logic-games.spb.ru/js/lang/lang.".$lang.".js?v=$v'></script> \n\r";
+        echo "<link media='screen' href='//logic-games.spb.ru/css/build/shared.css?v=$v' rel='stylesheet' type='text/css'>\n\r";
+        echo "<link media='screen' href='//logic-games.spb.ru/css/shared/lg-layout.css?v=$v' rel='stylesheet' type='text/css'>\n\r";
 
         @include 'snippets/head.inc'
     ?>
@@ -91,7 +93,7 @@ $i18n = new LogicGameI18n($locale, $gvId);
             </div>
             <div id="middle-block" >
                 <?php
-                    include $_SERVER['DOCUMENT_ROOT'] .'/snippets/lg-login-register.htm';
+                    include $dir .'/snippets/lg-login-register.htm';
                 ?>
                 <div id="game-field">
                     <?php
@@ -109,8 +111,8 @@ $i18n = new LogicGameI18n($locale, $gvId);
     </div>
     <div id="bottom-block" >
         <?php
-            include $_SERVER['DOCUMENT_ROOT'] .'/snippets/lg-profile.htm';
-            include $_SERVER['DOCUMENT_ROOT'] .'/snippets/lg-guestbook.htm';
+            include $dir .'/snippets/lg-profile.htm';
+            include $dir .'/snippets/lg-guestbook.htm';
             @include 'snippets/bottom.inc'
         ?>
         <div id="info-block">
