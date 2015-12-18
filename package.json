@@ -1,11 +1,8 @@
 {
   "name": "lg-template",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "boilerplate for logic",
   "author": "King of Animals Lion",
-  "scripts": {
-    "postinstall": "node scripts/copy.js"
-  },
   "main": "lib/foo.js",
   "repository": {
     "type": "git",
